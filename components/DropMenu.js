@@ -167,7 +167,7 @@ export default function DropMenu() {
                 </Link>
               )}
             </Menu.Item>
-            <Menu.Item>
+            {/* <Menu.Item>
               {({ active }) => (
                 <>
                   <Link>
@@ -211,7 +211,7 @@ export default function DropMenu() {
                   </Link>
                 </>
               )}
-            </Menu.Item>
+            </Menu.Item> */}
           </div>
           <div className="py-1">
             <Menu.Item>
@@ -250,7 +250,7 @@ export default function DropMenu() {
                 </Link>
               )}
             </Menu.Item>
-            <Menu.Item>
+            {/* <Menu.Item>
               {({ active }) => (
                 <Link href="/guestbook">
                   <a
@@ -321,8 +321,8 @@ export default function DropMenu() {
                   </a>
                 </Link>
               )}
-            </Menu.Item>
-            <Menu.Item>
+            </Menu.Item> */}
+            {/* <Menu.Item>
               {({ active }) => (
                 <Link href="/journey">
                   <a
@@ -339,8 +339,8 @@ export default function DropMenu() {
                   </a>
                 </Link>
               )}
-            </Menu.Item>
-            <Menu.Item>
+            </Menu.Item> */}
+            {/* <Menu.Item>
               {({ active }) => (
                 <Link href="/recommends">
                   <a
@@ -411,7 +411,7 @@ export default function DropMenu() {
                   </a>
                 </Link>
               )}
-            </Menu.Item>
+            </Menu.Item> */}
           </div>
         </Menu.Items>
       </Transition>

@@ -1,33 +1,34 @@
 const siteMetadata = {
-  title: 'Blog | Parth Desai',
-  author: 'Parth Desai',
-  headerTitle: 'Mere Musings',
-  description: 'My personal blog where I share my musings',
-  snippets: 'Reuseable code snippets collected by Parth',
+  title: 'Blog | Mohit Appari',
+  author: 'Mohit Appari',
+  headerTitle: 'The Journey',
+  description:
+    "My personal blog, where I embark on captivating journeys and share my travel experiences from around the globe. But that's not all – here, I delve deeper into the fascinating world of data science, machine learning, and data engineering to uncover hidden insights and unleash the power of data.",
+  snippets: 'Reuseable code snippets collected by Mohit',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://musing.vercel.app',
-  siteRepo: 'https://github.com/pycoder2000/blog',
+  siteRepo: 'https://github.com/moh1tt/blog',
   siteLogo: '/static/images/logo.png',
-  image: '/static/images/avatar.png',
+  image: '/static/images/avatar.jpg',
   socialBanner: '/static/images/twitter-card.png',
-  email: 'desaiparth2000@gmail.com',
-  github: 'https://github.com/pycoder2000',
-  twitter: 'https://twitter.com/_ParthDesai_',
-  linkedin: 'https://www.linkedin.com/in/parth-desai-2bb1b0160/',
-  website: 'https://parthdesai.vercel.app',
+  email: 'mohitt.appari@gmail.com',
+  github: 'https://github.com/moh1tt',
+  twitter: 'https://twitter.com/moh1tt',
+  linkedin: 'https://www.linkedin.com/in/moh1tt/',
+  website: 'https://musing.vercel.app',
   locale: 'en-US',
   analytics: {
-    plausibleDataDomain: '', // e.g. tailwind-nextjs-starter-blog.vercel.app
+    plausibleDataDomain: false, // e.g. tailwind-nextjs-starter-blog.vercel.app
     simpleAnalytics: false, // true or false
-    umamiWebsiteId: '', // e.g. 123e4567-e89b-12d3-a456-426614174000
-    googleAnalyticsId: 'G-F6V2QTJ628', // e.g. UA-000000-2 or G-XXXXXXX
+    umamiWebsiteId: false, // e.g. 123e4567-e89b-12d3-a456-426614174000
+    googleAnalyticsId: false, // e.g. UA-000000-2 or G-XXXXXXX
   },
   newsletter: {
-    provider: 'emailOctopus',
+    provider: false,
   },
   comment: {
-    provider: 'giscus',
+    provider: false,
     giscusConfig: {
       repo: process.env.NEXT_PUBLIC_GISCUS_REPO,
       repositoryId: process.env.NEXT_PUBLIC_GISCUS_REPOSITORY_ID,
@@ -46,8 +47,7 @@ const siteMetadata = {
     },
   },
   socialAccount: {
-    twitter: '_ParthDesai_',
+    twitter: 'moh1tt',
   },
 }
-
 module.exports = siteMetadata

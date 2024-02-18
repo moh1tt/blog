@@ -1,13 +1,13 @@
 ---
-name: Parth Desai
-avatar: /static/images/avatar.png
-occupation: Data Engineer
-company: Accenture
-email: desaiparth2000@gmail.com
-twitter: https://twitter.com/_ParthDesai_
-linkedin: https://www.linkedin.com/in/parth-desai-2bb1b0160/
-github: https://github.com/pycoder2000
-text1: I am an India based Data Engineer with a bachelors in Computer Science. I am passionate about Data Science and Automation. I am also fascinated with Mathematics and wish to make a career out of it someday.
+name: Mohit Appari
+avatar: /static/images/avatar.jpg
+occupation: Student
+company: Florida State University
+email: mohitt.appari@gmail.com
+twitter: https://twitter.com/moh1tt
+linkedin: https://www.linkedin.com/in/moh1tt/
+github: https://github.com/moh1tt
+text1: I'm an aspiring Data Scientist driven by an insatiable thirst for knowledge and a passion for uncovering insights hidden within the vast expanse of data.
 text2:
 text3:
 ---

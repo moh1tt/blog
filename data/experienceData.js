@@ -1,29 +1,16 @@
 const experienceData = [
   {
-    title: 'Data Engineering Intern',
-    company: 'Accenture',
-    location: 'Ahmedabad, India',
-    range: 'January 2022 - May 2022',
-    url: 'https://www.accenture.com/gr-en/about/consulting-index',
+    title: 'Associate Software Developer',
+    company: 'S&P Global',
+    location: 'Bengaluru, India',
+    range: 'January 2022 - June 2023',
+    url: 'https://www.spglobal.com/en/',
     text1:
-      'Helped with the digital transformation of BOAT by working on their platform called ByteETL.',
+      'Led the creation of new architecture to automate processes and increase the extraction of information from different data sources.',
     text2:
-      'Built the encryption component for the platform using Scala and Spark which included 2 encoding functionalities : ENCRYPT and HASH.',
+      'Handled complex data, and streamlined workflows optimizing processes and delivering efficient solutions.',
     text3:
-      'Created JSON wrappers for the encryption components and automated and triggered the pipelines to run at specific intervals using CronJob.',
-  },
-  {
-    title: 'Software Engineer Analytics',
-    company: 'HOPS Healthcare',
-    location: 'Ahmedabad, India',
-    range: 'March 2021 - June 2021',
-    url: 'https://hops.healthcare/',
-    text1:
-      'Guided by Mr. Vivek Patel, to create a pipeline that extracts essential information from informal conversations.',
-    text2:
-      'Worked on creating a web app for their healthcare system for doctors to analyze and save reports.',
-    text3:
-      'Developed functions for automatically extracting important elements from reports using BioBERT and Regex.',
+      'Automated extraction of 100K+ files for 10+ organizations, reducing manual effort of information extraction by 90%.',
   },
 ]
 

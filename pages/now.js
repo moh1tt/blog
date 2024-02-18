@@ -77,7 +77,7 @@ export default function Now(currentlyReading) {
     return () => clearInterval(timer)
   }, [])
 
-  var ParthBirthDate = '2000-04-16'
+  var ParthBirthDate = '2000-12-16'
   var birthDate = new Date(ParthBirthDate)
 
   var ParthAge = year - birthDate.getFullYear()
