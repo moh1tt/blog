@@ -16,10 +16,7 @@
 
 <div align="center">
 
-
-
 </div>
-
 
 <div align="center">
 
@@ -159,10 +156,6 @@ Follow the interactive prompt to generate a post with pre-filled front matter.
 | Favicon        | [realfavicongenerator](https://realfavicongenerator.net/) |
 | Content        | [MDX](https://mdxjs.com/)                                 |
 
-## 📈 Stats
-
-<img src="https://img.shields.io/website?down_color=red&down_message=offline&style=for-the-badge&up_color=green&up_message=online&url=https%3A%2F%2Fmusings.vercel.app"> <img src="https://img.shields.io/github/repo-size/pycoder2000/blog?style=for-the-badge&color=darkgreen" /> <img src="https://img.shields.io/github/languages/top/pycoder2000/blog?style=for-the-badge" /> <img src="https://img.shields.io/github/commit-activity/m/pycoder2000/blog?style=for-the-badge&color=orange" /> <img src="https://img.shields.io/github/deployments/pycoder2000/blog/Preview%20–%20blog?style=for-the-badge" /> <a href="https://tech-blogs.dev" target="_blank" >![Featured on tech-blogs.dev](https://img.shields.io/badge/Featured-tech--blogs.dev-yellow?style=for-the-badge)</a> <a href="https://makeapullrequest.com" target="blank" >![PRs Welcome](https://img.shields.io/badge/PR-Welcome-brightgreen?style=for-the-badge)</a>
-
 ## 🪜 Project structure
 
 ```bash
@@ -198,31 +191,3 @@ Follow the interactive prompt to generate a post with pre-filled front matter.
 The easiest way to deploy the template is to use the [Vercel Platform](https://vercel.com) from the creators of Next.js. Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/timlrx/tailwind-nextjs-starter-blog)
-
-## 🍰 Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Commit your Changes
-
-   ```bash
-   git commit -m 'Add some Feature'
-   ```
-
-3. Push to the Branch
-
-   ```bash
-   git push origin main
-   ```
-
-4. Open a Pull Request
-
-<div align="center">
-
-<a href="https://makeapullrequest.com" target="blank" >![PRs Welcome](https://img.shields.io/badge/PR-Welcome-brightgreen?style=for-the-badge)</a>
-
-</div>
