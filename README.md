@@ -181,10 +181,6 @@ Follow the interactive prompt to generate a post with pre-filled front matter.
 └── 📝 next.config.js         # configuration related to Next.js
 ```
 
-## 📊 Google Lighthouse Performance Metrics
-
-![Google Lighthouse Performance Metrics](https://github.com/pycoder2000/blog/raw/master/public/static/images/Google%20Lighthouse%20Performance%20Metrics.png)
-
 ## 🚀 Deploy
 
 **Vercel**  
