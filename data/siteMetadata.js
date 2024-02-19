@@ -7,7 +7,7 @@ const siteMetadata = {
   snippets: 'Reuseable code snippets collected by Mohit',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://musing.vercel.app',
+  siteUrl: 'https://moh1tt.vercel.app',
   siteRepo: 'https://github.com/moh1tt/blog',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.jpg',
@@ -16,11 +16,11 @@ const siteMetadata = {
   github: 'https://github.com/moh1tt',
   twitter: 'https://twitter.com/moh1tt',
   linkedin: 'https://www.linkedin.com/in/moh1tt/',
-  website: 'https://musing.vercel.app',
+  website: 'https://moh1tt.vercel.app',
   locale: 'en-US',
   analytics: {
     plausibleDataDomain: false, // e.g. tailwind-nextjs-starter-blog.vercel.app
-    simpleAnalytics: false, // true or false
+    simpleAnalytics: true, // true or false
     umamiWebsiteId: false, // e.g. 123e4567-e89b-12d3-a456-426614174000
     googleAnalyticsId: false, // e.g. UA-000000-2 or G-XXXXXXX
   },
