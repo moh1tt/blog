@@ -62,9 +62,9 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                     <dl>
                       <dd className="text-sm font-normal leading-6 text-gray-500 dark:text-gray-400">
                         <time dateTime={date}>{formatDate(date)}</time>
-                        {' • '}
+                        {/* {' • '}
                         <ViewCounter className="mx-1" slug={slug} />
-                        views
+                        views */}
                       </dd>
                     </dl>
                     <div className="space-y-5 xl:col-span-4">
