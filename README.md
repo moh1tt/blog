@@ -25,3 +25,5 @@
 </div>
 
 <img alt="homepage" src="https://github.com/moh1tt/blog/blob/master/public/static/images/BlogHomePage.png?raw=true"/>
+
+Give the repo a `star` to make more people know and delve deeper into the Journey with me! 😉
