@@ -167,7 +167,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                       bgColor="#B61AC1"
                     />
                   </EmailShareButton>
-                  <LinkedinShareButton
+                  {/* <LinkedinShareButton
                     summary={'Check out this blog'}
                     title={title}
                     source={siteMetadata.siteUrl}
@@ -180,7 +180,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                       fgColor="#fff"
                       bgColor="#0072b1"
                     />
-                  </LinkedinShareButton>
+                  </LinkedinShareButton> */}
                   <RedditShareButton
                     title={title}
                     url={postUrl}

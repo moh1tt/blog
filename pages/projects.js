@@ -32,6 +32,9 @@ export default function Projects() {
                 tech1={d.tech1}
                 tech2={d.tech2}
                 tech3={d.tech3}
+                tech4={d.tech4}
+                tech5={d.tech5}
+                tech6={d.tech6}
               />
             ))}
           </div>
