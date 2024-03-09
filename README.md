@@ -24,4 +24,4 @@
 
 </div>
 
-<img alt="homepage" src="https://github.com/moh1tt/blog/public/static/images/BlogHomePage.png"/>
+<img alt="homepage" src="https://github.com/moh1tt/blog/blob/master/public/static/images/BlogHomePage.png?raw=true"/>
