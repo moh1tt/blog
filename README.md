@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  The original template is designed by <a href="https://github.com/timlrx" target="_blank">Timothy Lin</a> and Parth Desai and can be found <a href="https://github.com/timlrx/tailwind-nextjs-starter-blog" target="_blank">here</a>. The demo for the same can be found <a href="https://tailwind-nextjs-starter-blog.vercel.app/" target="_blank">here</a>. 
+  The original template is designed by <a href="https://github.com/timlrx" target="_blank">Timothy Lin</a> and <a href="https://github.com/pycoder2000" target="_blank">Parth Desai</a>  and can be found <a href="https://github.com/timlrx/tailwind-nextjs-starter-blog" target="_blank">here</a>. The demo for the same can be found <a href="https://tailwind-nextjs-starter-blog.vercel.app/" target="_blank">here</a>. 
 </p>
 
 <div align="center">
