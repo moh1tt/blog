@@ -67,7 +67,8 @@ export default function AuthorLayout({ children, frontMatter }) {
                 animationDelay={300}
                 animationDuration={3000}
               >
-                {text1} Currently, I am focused on building data pipelines and automating.
+                {text1} Currently, I am focused on building robust data pipelines, and machine
+                learning.
                 {/* <Link
                   href={'https://www.accenture.com/in-en'}
                   className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
@@ -102,10 +103,10 @@ export default function AuthorLayout({ children, frontMatter }) {
                 show={true}
               >
                 <span className="text-black dark:text-white">
-                  data engineering pipelines and leveraging cutting-edge techniques{' '}
+                  data engineering pipelines and leveraging cutting-edge techniques in LLMs and{' '}
                 </span>
               </RoughNotation>
-              in computer vision to tackle real-world challenges.{' '}
+              computer vision to tackle real-world challenges.{' '}
               {/* <RoughNotation
                 type="underline"
                 show={true}

@@ -6,11 +6,11 @@ const experienceData = [
     range: 'January 2022 - June 2023',
     url: 'https://www.spglobal.com/en/',
     text1:
-      'Led the creation of new architecture to automate processes and increase the extraction of information from different data sources.',
+      'Automated data ingestion from diverse file formats including PDFs, images, and TIFFs using open-source libraries like PyMuPDF and PyPDF2, ensuring efficient extraction and capture of data.',
     text2:
-      'Handled complex data, and streamlined workflows optimizing processes and delivering efficient solutions.',
+      'Developed python pipelines to automate the ingestion process and seamlessly load extracted data into CSV files and data lakes like S3, enhancing data accessibility and usability.',
     text3:
-      'Automated extraction of 100K+ files for 10+ organizations, reducing manual effort of information extraction by 90%.',
+      'Demonstrated leadership by mentoring and training new colleagues on automated data ingestion techniques, fostering teamwork, effective communication, and collaborative problem-solving',
   },
 ]
 

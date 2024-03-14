@@ -6,7 +6,7 @@ draft: false
 summary: Introduction to RAGS - Elevating QA Chatbots with Advanced Language Models
 ---
 
-In this article we're gonna look at how RAG based LLM powered QA Chatbots work,
+In this article we're gonna look at how RAG based LLM powered QA Chatbots work, and how `LangChain` uses RAG to build a Q&A Chatbot.
 Thanks to Alex Litvinov for such informative article on [Building ZoomcampQABot](https://www.youtube.com/watch?v=QhFLeZV-PVk)
 
 Let's start with getting a better understanding of what a `RAG` is.
@@ -50,3 +50,31 @@ Now that we know how RAG works, let's look into what `LangChain` is and how it u
 Langchain allows you to connect a `LLM` like `GPT4` to your own source of data. Like referencing an entire database of
 your data. LangChain helps us build a pipeline shown in the image above, that helps us to provide answers to our questions,
 as well as take actions based on the answers.
+
+- It offers various modules such as model interaction, data connection and retrieval, chains, and agents to enable the development of effective NLP apps.
+- LangChain can be used for various applications like customer service chatbots, coding assistants, healthcare diagnostics, marketing and e-commerce tools, and more.
+- In simple terms, LangChain serves as a valuable framework for developers working with AI and NLP applications, offering a range of features to streamline the development process and create sophisticated language model-driven applications across various industries.
+
+<img className="inline" src="/static/images/Blog/langchain-home.png" alt="langchain" />
+
+## Why use a Vector Database?
+
+To feed data to our model as context along with our query, we need to have a way to retrieve the most relevant documents.
+This is where the vector database comes in.
+It allows us to run semantic search on the data and retrieve the most relevant documents.
+This is done by converting the data to vectors and then indexing them in the database.
+
+`Vector databases` are essential for Retrieval-Augmented Generation (RAG) applications as they efficiently `store`, `manage`, and `index` high-dimensional vector data, enhancing the efficiency and accuracy of RAG systems.
+These databases play a crucial role in storing and querying high-dimensional data for AI and machine learning applications, providing swift and low-latency queries, especially for similarity searches in RAG use cases.
+Vector databases offer features like `efficient storage` and `retrieval`, `scalability`, `query performance optimization`, `dimensional flexibility`, integration with AI frameworks, and security control.
+
+One of the open source Vector database is `Pinecone` with good documentation and integration with `LangChain`.
+
+<img className="inline" src="/static/images/Blog/pinecone.png" alt="pinecone" />
+
+## What's next ?
+
+Well, with that knowledge, you are now ready to build your own Q&A Chatbot using LangChain and RAG.
+If you'd like to follow along on how I created my own RAG based LLM for my coursework, you can check my blog [here](https://moh1tt.vercel.app/blog/sta5635)
+
+Happy Learning! 🚀

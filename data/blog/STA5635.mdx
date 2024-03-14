@@ -1,0 +1,248 @@
+---
+title: How I used RAG based LLM to help me with my course projects on Applied Machine Learning (STA5635 )
+date: '03-12-2024'
+tags: [Tech, Data, ML, LLMs, Langchain, OpenAPI, Pinecone, VectorDBs]
+draft: false
+summary: Internal working of a RAG based LLM and utilizing Vector embeddings using OpenAI APIs and Langchain to custom train a LLM for my course projects on Applied Machine Learning.
+---
+
+`RAG`, `LLMs`, `Langchain`, `OpenAPI`, `Pinecone`, `VectorDBs` sounds like a lot of jargon, right? Well, it is! But don't worry, I will explain everything in this blog post and by the end of it
+you should be able to build and deploy your very own LLM built on top of your custom data.
+Thanks to Krish Naik for such informative article on Langchain.
+
+This blog is gonna be a practical walk through on building a RAG based LLM using OpenAI and Pinecone. If you
+wanna delve deeper and get a better understanding of behind the working of RAG based LLMs QA Bots I suggest looking
+at my other blog post on [Behind the scenes of a RAG based LLM powered QAChatBot - LangChain - GPT4](https://moh1tt.vercel.app/blog/QABot).
+
+So, Let's get started!
+
+## About the project
+
+<img src="/static/images/Blog/sta-app.png" alt="sta-arch"></img>
+This project is going to have a RAG based architechture where we will query our question to the LLM
+with some context on our own data as well and few system prompts.{' '}
+
+To keep up with the project, you can download or clone my [github repo](https://github.com/moh1tt/langchain-qa-sta5635).
+
+## Setting up the environment
+
+To begin with, let's get all the required libraries and accounts that are gonna be used in this project.
+
+- We're gonna create a `virtual environment` using
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+- Then we're gonna create a `requirements.txt` file
+
+```bash
+langchain
+langchain_openai
+openai
+huggingface_hub
+pinecone-client
+ipykernel
+pypdf
+langchain_community
+cohere
+streamlit
+```
+
+These are the libraries required for this project. Add them to the requirements.txt file and install them using
+
+```bash
+pip install -r requirements.txt
+```
+
+- We're gonna be using OpenAI's API for the LLM and Pinecone DB for storing the data. Also we're gonna need Cohere to embed our data. So, you need to have an account on these platforms. To store and access these keys in a safe way, we would create a `.env` file.
+
+```bash
+OPENAI_API_KEY=
+PINECONE_API_KEY=
+PINECONE_INDEX_NAME=
+COHERE_API_KEY=
+PINECONE_ENVIRONMENT=
+```
+
+These are the environment variables that we'll be using.
+
+- Create accounts on [OpenAI](https://beta.openai.com/signup/), [Pinecone](https://www.pinecone.io/) and [Cohere](https://cohere.ai/). Once you have the accounts, you can get the API keys and store them in the `.env` file.
+
+Now that we have our environment setup, let's move on to the next step.
+
+## Ingesting the data from your files.
+
+In my case, the data I had were a bunch of pdfs. Lecture notes and slides that we're provided by our professor.
+The data can be in any format, it can be a csv, json, pdf, txt, apis etc.
+
+The architecture that we're gonna follow can be seen below.
+
+<img src="/static/images/Blog/sta-flow.png" alt="sta-flow"></img>
+
+For this project, We're gonna use `pypdf` to extract the text from the pdfs and then we're gonna use `cohere` to embed the data.
+
+```python
+# Extracting texts from pdfs
+
+# Reading pdfs
+def read_pdf(file_path):
+    loader = PyPDFLoader(file_path)
+    documents = loader.load_and_split()
+    return documents
+
+
+# Process pdfs
+def process_documents(documents):
+    doc_text = ''
+    for doc in documents:
+        text = doc.page_content
+
+        # preprocess
+        text = clean_text(text)
+        doc_text += text
+    return doc_text
+
+# Preprocess the text
+def clean_text(text):
+    # Replace newline characters with spaces
+    text = text.replace('\n', ' ')
+    # Remove unknown characters
+    text = ''.join(c for c in text if unicodedata.category(c) != 'Co')
+    # Remove extra whitespace
+    text = re.sub(r'\s+', ' ', text).strip()
+    # Remove non-alphanumeric characters
+    text = re.sub(r'[^a-zA-Z0-9\s]', '', text)
+    # Convert to lowercase
+    text = text.lower()
+    return text
+
+
+
+# Load and process all PDF files in the the directory
+pdf_dir_path = "pdfs/"
+
+all_texts = []
+for filename in os.listdir(pdf_dir_path):
+    if filename.endswith(".pdf"):
+        file_path = os.path.join(pdf_dir_path, filename)
+        documents = read_pdf(file_path)
+        texts = process_documents(documents)
+        all_texts.append(texts)
+```
+
+The above code is gonna give us all the texts as a list of texts from pdfs.
+
+once we have all the text we need, we move on to embed them.
+
+## Embedding the data
+
+There are many ways to embed data, one way is to use `OpenAi`'s embedding but for this project we're gonna use `Cohere` as mentioned in pinecone's
+documentation.
+
+```python
+# Create embeddings
+def embed(text):
+    embeds = co.embed(
+        texts=text,
+        model='embed-english-v3.0',
+        input_type='search_document',
+        truncate='END'
+    ).embeddings
+    return embeds
+
+# Create embeddings
+embeds = embed(all_texts)
+```
+
+The above code is gonna give us the embeddings of the data.
+To know more about embeddings and how they work, you can visit [Cohere's documentation](https://cohere.com/).
+
+## Upserting the data to Pinecone
+
+Once we have the embeddings, we can upsert the data to Pinecone. You can follow the [documentation](https://docs.pinecone.io/docs/upsert-data) provided on pinecone.
+
+```python
+# Uploading data in batches
+
+# Define the "index" variable here or make sure it is accessible in the current scope
+
+batch_size = 128
+
+ids = [str(i) for i in range(shape[0])]
+# create list of metadata dictionaries
+meta = [{'text': text} for text in all_texts]
+
+# create list of (id, vector, metadata) tuples to be upserted
+to_upsert = list(zip(ids, embeds, meta))
+
+for i in range(0, shape[0], batch_size):
+    i_end = min(i+batch_size, shape[0])
+    index.upsert(vectors=to_upsert[i:i_end])
+
+# let's view the index statistics
+print(index.describe_index_stats())
+```
+
+We try to upsert in batches to avoid large uploads and cause errors.
+Also, be sure to check the index dimensions because you have to create and specify them when creating an index in pinecone.
+
+To check the `dimensions`, you can use the following code.
+
+```python
+import numpy as np
+
+shape = np.array(embeds).shape
+print(shape)
+```
+
+This tells us the dimensions of the embeddings that will be created.
+
+Now that we have our database ready, we can move on to the next step.
+
+## Creating the RAG based LLM
+
+Now all we have to do is query user's question based on the context retrieved from the similarity search from pinecone
+and the system prompts.
+
+```python
+# RAG prompt
+template = """Answer the question based only on the following context:
+{context}
+Question: {question}
+"""
+prompt = ChatPromptTemplate.from_template(template)
+
+# RAG
+model = ChatOpenAI(temperature=0, model="gpt-4-1106-preview")
+
+chain = (
+    RunnableParallel({"context": retriever, "question": RunnablePassthrough()})
+    | prompt
+    | model
+    | StrOutputParser()
+)
+```
+
+The `chain` above makes us chain the `retriever` which is the context,
+`prompt` which is the question and `model` which is the LLM.
+
+If everything went well, you would successfully have created a RAG based LLM. We can query our question using,
+
+```python
+chain.invoke("""Are the hidden states of the Hidden Markov Model discrete or continuous?
+
+  Continuous
+  Could be either discrete or continuous
+  Discrete""")
+```
+
+## Deployment
+
+To deploy my app, I used `streamlit` to quicky create a web app and hosted it on `hugging space`.
+
+The code for streamlit can be found on my github repo as `app.py`.
+Be sure to add a `gitignore` and save your keys from getting exposed!
+
+Happy Learning! 🚀

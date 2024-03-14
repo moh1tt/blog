@@ -12,6 +12,19 @@ const projectsData = [
     tech5: 'Mage',
     tech6: 'Spark',
   },
+  {
+    title: 'STA5635 Helper LLM APP',
+    description: `RAG based LLM Helper App for Applied Machine Learning Course - Florida State University. Created using Langchain and OpenAI's API.`,
+    imgSrc: '',
+    href: 'https://huggingface.co/spaces/moh1tt/STA5635-Helper-App',
+    github: 'https://github.com/moh1tt/langchain-qa-sta5635',
+    tech1: 'Langchain',
+    tech2: 'OpenAI',
+    tech3: 'Pinecone',
+    tech4: 'Cohere',
+    tech5: 'HuggingSpace',
+    tech6: 'Streamlit',
+  },
 ]
 
 export default projectsData
