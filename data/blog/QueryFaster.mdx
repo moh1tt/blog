@@ -1,0 +1,137 @@
+---
+title: Optimizing SQL Performance - Advanced Techniques for Faster Processing
+date: '03-16-2024'
+tags: [Tech, Data, SQL]
+draft: false
+summary: 'Common Table Expressions vs Subqueries vs Views vs Temp Tables (Materialized vs Non-Materialized)'
+---
+
+In this blog we're gonna look at the difference between `Non-Materialized` and `Materialized` types of creating tables for faster
+data querying and performance.
+
+## So what's the difference between Materialized and Non-Materialized Views
+
+Materialized views and non-materialized (or regular) views are both database objects that store the result of a query.
+However, they differ in how they store and update their data.
+
+<center>
+  <img
+    src="https://techdifferences.com/wp-content/uploads/2016/12/View-Vs-Materialized-View.jpg"
+    alt="views"
+  ></img>
+</center>
+
+## Let's look at Non-Materialized Views:
+
+- Also known simply as "views", these are virtual tables that are defined by a query.
+- When you query a non-materialized view, the database executes the underlying query and returns the results as if they were coming from a table.
+- `Non-materialized` views `do not store` data themselves; they are essentially saved SQL queries.
+- Every time you query a non-materialized view, the underlying query is executed, which means it reflects the current data in the underlying tables.
+- Non-materialized views are useful for simplifying complex queries, providing security by restricting access to certain columns or rows, and abstracting the underlying schema from users.
+
+Common Table Expressions (CTE), Subqueries and Views are all Non-Materialized Views
+
+### Subqueries
+
+These are the most basic type of queries that we ususally use in our SQL queries.
+They are used to return data that will be used in the main query as a condition or a column.
+
+Let's assume we have a table `TableA` and `TableB` and we would like to derive few columns and perform some analytics to finally provide a consise version of the data.
+So, a regular query would typically look like,
+
+```SQL
+SELECT * FROM TableA A
+    JOIN (SELECT * FROM TABLEB where soumething>5) B
+        ON A.id = B.id AND A.id2 = B.id2
+```
+
+We call this type of query as a `Subquery`.
+
+### Common Table Expressions (CTE)
+
+Common Table Expressions (CTEs) are temporary result sets that are defined within the scope of a single
+SQL statement, particularly within the `WITH` clause. They allow you to define a named temporary result
+set that can be referenced within the same SQL statement, which makes complex queries more readable and manageable.
+CTEs can be thought of as similar to views, but they exist only for the duration of the query execution.
+
+```SQL
+WITH Bb AS (
+    SELECT * FROM TABLEB where soumething>5
+)
+
+SELECT * FROM TableA A
+    JOIN Bb
+        ON A.id = Bb.id AND A.id2 = Bb.id2
+```
+
+This takes the same time as the above subquery but in terms of `readability` and `maintainability`, CTEs are better.
+
+### Views
+
+A view in SQL is a virtual table that is based on the result set of a SELECT query.
+It's essentially a stored SQL query that you can treat as if it were a table. Views do not contain any
+data themselves; instead, they provide a way to represent data from one or more tables in a structured format.
+
+They are very useful when queries are shared across various domains and are used in multiple places abstracting the underlying schema from the users.
+
+```SQL
+CREATE VIEW Bb AS
+    SELECT * FROM TABLEB where soumething>5
+
+SELECT * FROM TableA Aa
+    JOIN Bb
+        ON A.id = Bb.id AND A.id2 = Bb.id2
+```
+
+One of the cons can be when you try to drop `Aa` table, it will throw an error as the view is dependent on the table.
+With that said, lets move on to the next type of views, `Materialized Views`.
+
+## Materialized Views
+
+These are also known as `Snapshot` or `Cached` views.
+They are similar to non-materialized views in that they are defined by a query,
+but they differ in how they store and update their data.
+
+### Temporary Tables
+
+Temporary tables are a type of database table that is created and managed within the context of a
+database session. They are typically used to store temporary data that needs to be manipulated, joined,
+or otherwise processed within a specific session. Temporary tables are particularly useful when you need to store intermediate results during complex
+data processing tasks or when you need to store data temporarily for the duration of a session.
+
+These tables are automatically dropped when the session ends.
+
+```SQL
+CREATE TEMPORARY TABLE Bb AS
+    SELECT * FROM TABLEB where soumething>5
+
+SELECT * FROM TableA Aa
+    JOIN Bb
+        ON A.id = Bb.id AND A.id2 = Bb.id2
+```
+
+They are way faster and efficient with complex queries and large datasets.
+
+### Materialized Views
+
+The only difference between `Materialized Views` and `Temporary Tables` is that the former is stored in the database and the latter is not.
+This creates a table that is stored in the database and can be queried like a regular table.
+
+```SQL
+CREATE MATERIALIZED VIEW Bb AS
+    SELECT * FROM TABLEB where soumething>5
+
+SELECT * FROM TableA Aa
+    JOIN Bb
+        ON A.id = Bb.id AND A.id2 = Bb.id2
+```
+
+The main advantage of materialized views is that they can be indexed, which can significantly improve query performance.
+
+There you go, these are the different types of views and tables that can be used to optimize the performance of your SQL queries.
+They can be really helpful for powerful analysis and data processing tasks.
+
+Make sure to use CTEs rather than subqueries for better readability and maintainability. And if the
+queries are complex and large, used frequently and required to be updated frequently, then go for Materialized Views.
+
+## Hope this helps you in your SQL journey. Happy Coding! 🚀
