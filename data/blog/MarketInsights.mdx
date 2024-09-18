@@ -1,0 +1,172 @@
+---
+title: Market Insights - A Comprehensive Business and News Platform
+date: '09-18-2024'
+tags: [Tech, Web Development, Docker, News, Weather]
+draft: false
+summary: A detailed walkthrough of the Market Insights project, which provides business news, custom news, localized news, weather updates, and more. Includes setup instructions and technologies used.
+---
+
+In this article, we explore the Market Insights project, a platform built to deliver business news, custom news, localized news, weather updates, and user authentication. We'll dive into the setup and technologies used in this project.
+
+`Note`: This article provides an overview of the project's setup and usage. For a complete walkthrough, refer to the project's documentation and codebase.
+
+<img className="inline" src="/static/images/Blog/home.png" alt="arc" />
+
+[Market Insights GitHub](https://github.com/yourusername/market-insights)
+
+- [Overview](#overview)
+- [Frontend Setup](#frontend-setup)
+- [Backend Setup](#backend-setup)
+- [Database Setup](#database-setup)
+- [Running the Project](#running-the-project)
+- [Issues & Troubleshooting](#issues-troubleshooting)
+
+# <a id="overview"></a>Overview
+
+Market Insights is a web application designed to aggregate and present business and news information. The platform includes features such as weather updates and user authentication.
+
+### Technologies Used:
+
+- **Frontend:** Next.js, TypeScript, Tailwind CSS
+- **Backend:** Flask
+- **Database:** PostgreSQL
+- **ORM:** Prisma
+- **Containerization:** Docker
+- **Database Management:** pgAdmin
+
+# <a id="frontend-setup"></a>Frontend Setup
+
+The frontend of the project is built with Next.js, TypeScript, and Tailwind CSS. To get started with the frontend:
+
+1. **Navigate to the frontend directory**:
+
+   ```bash
+   cd frontend
+
+   ```
+
+2. **Install dependencies**:
+
+   ```bash
+   npm install
+
+   ```
+
+3. **Start the development server**:
+   ```bash
+   npm run dev
+   ```
+
+This will start the frontend server on `http://localhost:3000`.
+
+Key Files and Directories:
+
+- pages/: Contains the Next.js pages.
+- components/: Reusable React components.
+- styles/: Tailwind CSS configuration and styles.
+
+# <a id="backend-setup"></a>Backend Setup
+
+The backend is implemented using Flask and serves as the API layer for the application.
+
+The backend is implemented using Flask and serves as the API layer for the application.
+
+1. **Navigate to the backend directory**:
+
+   ```bash
+   Copy code
+   cd backend
+
+   ```
+
+2. **Create a virtual environment and activate it**:
+
+   ```bash
+   Copy code
+   python -m venv venv
+   source venv/bin/activate
+
+   ```
+
+3. **Install dependencies**:
+
+   ```bash
+   Copy code
+   pip install -r requirements.txt
+
+   ```
+
+4. **Run the Flask application**:
+
+   ```bash
+   Copy code
+   flask run
+
+   ```
+
+Key Files:
+
+- app.py: Main Flask application file.
+- routes/: Contains Flask routes and API endpoints.
+
+# <a id="database-setup"></a>Database Setup
+
+The project uses PostgreSQL for data storage, managed through Docker and pgAdmin.
+
+1. **Start the PostgreSQL and pgAdmin containers**:
+
+   ```bash
+   Copy code
+   docker-compose up -d
+   Access pgAdmin: Open http://localhost:pgadmin-port in your browser and log in to manage your PostgreSQL databases.
+
+   ```
+
+2. **Run Prisma migrations**:
+
+   ```bash
+   Copy code
+   npx prisma migrate deploy
+   ```
+
+Key Files:
+
+- prisma/schema.prisma: Prisma schema file.
+- docker-compose.yml: Docker Compose configuration for PostgreSQL and pgAdmin.
+
+# <a id="running-the-project"></a>Running the Project
+
+To run the full application with both frontend and backend:
+
+1. **Start the backend**:
+
+   ```bash
+   Copy code
+   cd backend
+   flask run
+
+   ```
+
+2. **Start the frontend**:
+
+   ```bash
+   Copy code
+   cd frontend
+   npm run dev
+
+   ```
+
+3. **Ensure Docker containers are running**:
+
+   ```bash
+   Copy code
+   docker-compose up -d
+   ```
+
+# <a id="issues-troubleshooting"></a>Issues & Troubleshooting
+
+- Next.js Command Not Found: Ensure you have installed dependencies in the frontend directory and that next is listed in node_modules/.bin/.
+- Flask Application Not Starting: Verify your virtual environment is activated and dependencies are installed.
+- Database Connection Issues: Check your Docker containers and ensure the database is running.
+
+Clone the github repo [here](www.github.com/moh1tt/market-insights) and follow the instructions to set up the project on your local machine.

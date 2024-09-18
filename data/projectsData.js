@@ -1,5 +1,18 @@
 const projectsData = [
   {
+    title: 'Market Insights',
+    description: `Full stack web application that provides insights on the latest business, local and custom news with weather updates. Built with Flask, Next.js, Tailwindcss, and PostgreSQL.`,
+    imgSrc: '',
+    href: 'http://moh1tt.vercel.app/blog/MarketInsights',
+    github: 'https://github.com/moh1tt/market-insights',
+    tech1: 'Flask',
+    tech2: 'Next.js',
+    tech3: 'Tailwindcss',
+    tech4: 'Postgres',
+    tech5: 'Docker',
+    tech6: 'Typescript',
+  },
+  {
     title: 'NY Taxi Data Engineering Pipeline',
     description: `A data engineering pipeline that processes and analyzes New York City taxi data. Built with modern data engineering tools to streamline the process of data ingestion, processing, and analysis.`,
     imgSrc: '',
