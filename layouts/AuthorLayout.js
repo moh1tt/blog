@@ -67,46 +67,26 @@ export default function AuthorLayout({ children, frontMatter }) {
                 animationDelay={300}
                 animationDuration={3000}
               >
-                {text1} Currently, I am focused on building robust data pipelines, and machine
-                learning.
-                {/* <Link
-                  href={'https://www.accenture.com/in-en'}
-                  className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
-                >
-                  Accenture
-                </Link> */}
+                {text1} Looking for exciting opportunities to work and collaborate with bright minds
+                and explore the world of data together.
               </RoughNotation>
             </p>
-            <br />
-            {/* <p>
-              This is what I am doing right{' '}
-              <Link
-                href={'/now'}
-                className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
-              >
-                now
-              </Link>
-            </p> */}
-            <br />
+
             <p className="hidden md:block">
-              Passionately engaged in the realms of computer vision and data engineering, I'm
-              constantly immersed in diverse projects aimed at pushing boundaries and driving
-              innovation. As a staunch advocate for open source collaboration, I actively seek
-              opportunities to work alongside new collaborators. Currently, my focus is on building
-              robust{' '}
+              Few things I love?
               <RoughNotation
                 animationDelay="1000"
                 animationDuration="3000"
                 type="highlight"
                 color="#DE1D8D"
-                strokeWidth="1"
+                strokeWidth="1.5"
                 show={true}
               >
                 <span className="text-black dark:text-white">
-                  data engineering pipelines and leveraging cutting-edge techniques in LLMs and{' '}
+                  {' '}
+                  Coffee, Anime, Gaming, Videography and Working With Data!{' '}
                 </span>
               </RoughNotation>
-              computer vision to tackle real-world challenges.{' '}
               {/* <RoughNotation
                 type="underline"
                 show={true}
@@ -119,7 +99,7 @@ export default function AuthorLayout({ children, frontMatter }) {
                 Science
               </RoughNotation> */}
             </p>
-            <br />
+
             <p>
               If you're embarking on an exciting project or seeking fresh perspectives, don't
               hesitate to reach out via{' '}

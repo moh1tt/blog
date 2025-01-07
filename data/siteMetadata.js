@@ -3,7 +3,7 @@ const siteMetadata = {
   author: 'Mohit Appari',
   headerTitle: 'The Journey',
   description:
-    "My personal blog, where I embark on captivating journeys and share my travel experiences from around the globe. But that's not all – here, I delve deeper into the fascinating world of data science, machine learning, and data engineering to uncover hidden insights and unleash the power of data.",
+    "my personal blog, where I embark on captivating journeys and share my travel experiences from around the globe. But that's not all – here, I delve deeper into the fascinating world of data science, machine learning, and data engineering to uncover hidden insights and unleash the power of data.",
   snippets: 'Reuseable code snippets collected by Mohit',
   language: 'en-us',
   theme: 'system', // system, dark or light

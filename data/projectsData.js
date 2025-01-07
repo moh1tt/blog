@@ -1,5 +1,18 @@
 const projectsData = [
   {
+    title: 'BayWheels',
+    description: `End-to-End data engineering pipeline that processes and analyzes BayWheels bike sharing data. Built with modern data engineering tools to streamline the process of data ingestion, processing, and analysis.`,
+    imgSrc: '',
+    href: 'https://medium.com/@mohitt.appari/from-data-to-insights-building-a-data-engineering-pipeline-analyzing-baywheels-bike-data-ae42fa61a23b',
+    github: 'https://github.com/moh1tt/baywheels',
+    tech1: 'Flask',
+    tech2: 'Next.js',
+    tech3: 'Tailwindcss',
+    tech4: 'Postgres',
+    tech5: 'Docker',
+    tech6: 'Typescript',
+  },
+  {
     title: 'Market Insights',
     description: `Full stack web application that provides insights on the latest business, local and custom news with weather updates. Built with Flask, Next.js, Tailwindcss, and PostgreSQL.`,
     imgSrc: '',

@@ -7,7 +7,7 @@ email: mohitt.appari@gmail.com
 twitter: https://twitter.com/moh1tt
 linkedin: https://www.linkedin.com/in/moh1tt/
 github: https://github.com/moh1tt
-text1: I'm an aspiring Data Scientist driven by an insatiable thirst for knowledge and a passion for uncovering insights hidden within the vast expanse of data.
+text1: Someone who loves data and everything related to it. Current ventures lie in the field of data engineering and machine learning.
 text2:
 text3:
 ---
