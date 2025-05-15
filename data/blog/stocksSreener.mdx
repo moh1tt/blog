@@ -1,0 +1,139 @@
+---
+title: Building a Stock Screener Using Python and Streamlit
+date: '05-14-2025'
+tags:
+  [
+    Finance,
+    Data-Science,
+    Stock-Market,
+    Streamlit,
+    Investment,
+    Quant,
+    Python,
+    Visualization,
+    Portfolio,
+    Open-Source,
+  ]
+draft: false
+summary: 'A detailed walkthrough of how I built a dynamic and customizable Stocks Screener using Python, Streamlit, and real financial data. This project combines finance and data science principles to empower investment research through factor-based strategies.'
+---
+
+## Introduction
+
+In this blog, we’ll explore how I built a **Stock Screener** — a tool that allows you to screen and rank S&P 500 stocks based on financial metrics like P/E, ROE, EPS Growth, and more. The project merges **Python**, **data visualization**, and **financial analysis** into a no-code, interactive web app powered by **Streamlit**.
+
+Whether you’re a retail investor, finance student, or data science enthusiast, this app helps you make **data-driven stock decisions** with clarity and confidence.
+
+<img
+  className="inline"
+  src="public/static/images/Blog/sample-demo-screener.png"
+  alt="stock-screener-ui"
+/>
+
+---
+
+## Project Overview
+
+This project focuses on **factor-based investing** — an approach used by quantitative hedge funds and asset managers to group and evaluate stocks based on characteristics like value, quality, and growth.
+
+### What You Can Do With It:
+
+1. Filter stocks based on:
+   - Price-to-Earnings (P/E)
+   - Return on Equity (ROE)
+   - Debt-to-Equity (D/E)
+   - EPS Growth
+   - Market Cap
+2. Assign custom weights to each factor and generate a **Factor Score**.
+3. View the top 10 ranked stocks and full filtered list.
+4. Visualize relationships between financial features using:
+   - Bar charts
+   - Scatter plots
+   - Bubble charts
+   - Market Cap histograms
+5. Plan your investment with an **interactive savings allocator**:
+   - Input your savings
+   - Get recommendations based on Value, Growth, and Quality strategies
+
+---
+
+## Tools and Libraries
+
+- `Streamlit` – for building the web app UI
+- `Pandas` – data manipulation
+- `yfinance` – stock data ingestion
+- `Matplotlib` / `Seaborn` – visualizations
+- `Python` – the glue holding everything together
+
+Install everything with:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## GitHub Repository
+
+📂 Check out the full code here: [GitHub Repository](https://github.com/moh1tt/factor-based-stock-screener)
+
+---
+
+## Key Features
+
+### 1. 📊 Financial Filters
+
+Users can interactively filter stocks by financial health indicators:
+
+- P/E for valuation
+- ROE for profitability
+- D/E for risk
+- EPS Growth for momentum
+
+### 2. ⚖️ Custom Factor Scoring
+
+You can assign weightage to each metric to match your investing style — whether you're value-driven, growth-focused, or somewhere in between.
+
+### 3. 📈 Visual Analytics
+
+The app comes with rich visualizations:
+
+- Top 10 Stock Bar Charts
+- ROE vs P/E Scatter Plot
+- Market Cap Distribution
+- Bubble charts for visual stock comparison
+
+### 4. 💸 Investment Planner
+
+Enter your total investable savings and get a personalized investment breakdown across:
+
+- 🟦 Value (40%)
+- 🟩 Quality (35%)
+- 🟥 Growth (25%)
+
+### 5. 📥 CSV Export
+
+Download your filtered results with a single click to use in Excel, Tableau, or your own analysis workflows.
+
+---
+
+## Challenges and Improvements
+
+- 🔁 **Live Data Delays**: yfinance can occasionally throttle or slow down large requests. Caching helped speed up reruns.
+- 📏 **Outlier Handling**: Extremely high or negative values needed to be clipped or filtered for better scoring logic.
+- 🧠 **Sector Awareness**: Adding sector or industry filters could help build more specific screeners.
+- 📉 **Backtesting** (Future): Being able to evaluate past performance of screened portfolios would take this to the next level.
+
+---
+
+## Conclusion
+
+This Stock Screener is more than just a coding project — it’s a data product designed to empower smarter investing. By combining financial theory with interactive technology, I created a platform that gives anyone the tools to **think like a quant** and act with insight.
+
+What started as a learning project turned into a full-featured app that touches multiple aspects of finance, data science, and product thinking.
+
+💬 Have feedback or ideas? Drop them in a GitHub issue or connect with me on [LinkedIn](https://linkedin.com/in/moh1tt)!
+
+---
+
+Let’s build better tools for better investing. 🚀

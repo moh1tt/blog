@@ -1,46 +1,47 @@
 const experienceData = [
   {
-    title: 'AI & Data Research Intern',
+    title: 'AI & Data Researcher',
     company: 'Florida State University',
     range: 'June 2024 – September 2024',
     text1:
-      'Implemented and evaluated Generative AI models (GANs, VAEs, RNNs) for data synthesis, improving model training efficiency by 25%.',
+      'Researched and implemented Generative AI models (GANs, VAEs, RNNs) for material synthesis and battery performance optimization, enhancing data augmentation techniques for experimental datasets.',
     text2:
-      'Optimized NequIP on a dataset of 11,043 materials using HPC clusters, improving prediction accuracy by 15% and reducing computational time by 20%.',
+      'Evaluated open-source physics-informed AI models like NequIP for molecular stability prediction, conducting hyperparameter tuning and extensive testing on high-performance computing clusters.',
     text3:
-      'Fine-tuned hyperparameters, boosting performance metrics by 30% for molecular property predictions.',
+      'Collaborated with chemistry researchers to design experiments, prepare custom datasets (11,000+ material samples), and apply AI-driven approaches for next-generation energy storage research.',
   },
   {
-    title: 'Data Engineer',
+    title: 'Data Scientist',
     company: 'S&P Global',
     range: 'January 2022 – August 2023',
     text1:
-      'Built Python-based ETL pipelines using Apache Spark and Hadoop, cutting processing time by 40% and reducing costs by 25%.',
+      'Led development of automated ETL pipelines using Python and database tools to extract and process 10,000+ PDFs and TIFFs daily, reducing manual workload by 92% and improving data readiness.',
     text2:
-      'Automated data extraction from 100K+ files daily using OCR and libraries like pdfplumber, improving efficiency by 50%.',
+      'Built OCR automation using pdfplumber, PyPDF2, Camelot; optimized Google PyTesseract for better text extraction from regulatory documents, cutting operational costs by 30%.',
     text3:
-      'Developed Tableau dashboards and scalable storage with AWS, MySQL, PostgreSQL, and Oracle for data-driven decisions.',
+      'Created dynamic dashboards with Tableau, Power BI; scaled data storage on AWS S3, MySQL, PostgreSQL, and Oracle; presented predictive insights to leadership, supporting financial decision-making.',
   },
   {
     title: 'Python Developer Intern',
     company: 'LG',
     range: 'May 2021 – August 2021',
     text1:
-      'Created a drowsiness detection system using Python, OpenCV, and YOLO on Raspberry Pi, achieving 90% facial landmark detection accuracy.',
-    text2: 'Led a smart logistics system project using CNNs, reducing package sorting time by 25%.',
+      'Developed a real-time drowsiness detection system using Python, OpenCV, YOLO, and Raspberry Pi 4, achieving 90% facial landmark detection accuracy.',
+    text2:
+      'Designed a smart logistics management solution using CNNs, earning 3rd place in LG Ideathon by reducing package sorting time by 25%.',
     text3:
-      'Built ETL pipelines using Pandas and Prefect; integrated IoT sensor data into PostgreSQL using REST APIs.',
+      'Integrated REST APIs with PostgreSQL to manage IoT sensor data for scalable, real-time logistics tracking.',
   },
   {
     title: 'Python Developer Intern',
-    company: 'ITC',
+    company: 'ITC Infotech',
     range: 'January 2021 – March 2021',
     text1:
-      'Developed a web application using Flask with MySQL and PostgreSQL for master data management.',
+      'Built a secure master data management system using Flask and MySQL, enabling multi-role workflows across vendors, users, and admins.',
     text2:
-      'Automated ticket creation workflows with Python scripts, enabling real-time inventory tracking.',
+      'Designed authentication, access control, and approval workflows to enhance data security and streamline operations.',
     text3:
-      'Built interactive dashboards using Tableau and Power BI via Microsoft Power Platform for actionable insights.',
+      'Reduced manual tracking efforts by 30% through process automation, improving data update efficiency across business units.',
   },
 ]
 
