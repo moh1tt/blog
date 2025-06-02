@@ -32,7 +32,8 @@ export default function Home({ posts }) {
             </h2>
 
             <p className="hidden pt-10 text-lg leading-7 text-slate-600 dark:text-slate-300 md:block">
-              I'm glad you made it here! A place where I love to write about everything, from <br />
+              You'll also find posts on topics I love from
+              <br />
               <RoughNotation
                 animate="true"
                 type="highlight"
@@ -43,9 +44,10 @@ export default function Home({ posts }) {
                 className="text-slate-200"
                 strokeWidth={1}
               >
-                gaming, building stuff, anime trends to the deep trenches of data.{' '}
+                algorithmic trading and LLMs to the occasional deep dive into gaming, anime, or{' '}
               </RoughNotation>
-              Have a good read!{' '}
+              something I'm currently building. Whether you're here to geek out over models, read a
+              tutorial, or just explore ideas — I’m glad you made it. Enjoy the read!{' '}
               <div className="mt-8 text-slate-600 dark:text-slate-400">
                 <span className="text-sm">Press</span>{' '}
                 <span className="rounded-md bg-gray-300 p-1 text-sm text-gray-900 dark:bg-gray-400">
@@ -150,7 +152,7 @@ export default function Home({ posts }) {
               <div className="my-2 grid items-start gap-8">
                 <div className="group relative">
                   <div className="animate-tilt absolute -inset-0.5 rounded-lg bg-gradient-to-r  from-pink-600 to-purple-600 opacity-50 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
-                  <Link href="https://drive.google.com/file/d/1aepRkgoTsXmcXJHDnCDZ9oyKCVQ0ibWL/view?usp=sharing">
+                  <Link href="https://docs.google.com/document/d/1z_s07XUKvQmXXB5Ap0XhUWHyVb9VJU9XHCJyQbhvK6M/edit?usp=sharing">
                     <span className="relative flex items-center divide-x divide-gray-600 rounded-lg bg-white px-7 py-4 leading-none dark:bg-black">
                       <span className="flex items-center space-x-5">
                         <svg
