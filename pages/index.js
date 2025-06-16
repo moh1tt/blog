@@ -32,7 +32,7 @@ export default function Home({ posts }) {
             </h2>
 
             <p className="hidden pt-10 text-lg leading-7 text-slate-600 dark:text-slate-300 md:block">
-              You'll also find posts on topics I love from
+              You'll find posts on topics I love from
               <br />
               <RoughNotation
                 animate="true"
@@ -44,7 +44,8 @@ export default function Home({ posts }) {
                 className="text-slate-200"
                 strokeWidth={1}
               >
-                algorithmic trading and LLMs to the occasional deep dive into gaming, anime, or{' '}
+                algorithmic trading, LLMs, time series to the occasional deep dive into gaming,
+                anime, or{' '}
               </RoughNotation>
               something I'm currently building. Whether you're here to geek out over models, read a
               tutorial, or just explore ideas — I’m glad you made it. Enjoy the read!{' '}

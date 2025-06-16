@@ -1,5 +1,16 @@
 const experienceData = [
   {
+    title: 'Data Analyst',
+    company: 'APD Florida',
+    range: 'June 2025',
+    text1:
+      'Conducted in-depth statistical analysis using SPSS, SAS, and R, supporting data-driven decisions across regulatory and compliance teams in finance.',
+    text2:
+      'Developed and maintained interactive dashboards in Tableau and Excel, visualizing KPIs, trend analysis, and operational performance to inform executive leadership and agency reporting.',
+    text3:
+      'Cleaned, analyzed, and interpreted large datasets for reporting and forecasting, delivering actionable insights to stakeholders through automated reports and visual storytelling tools.',
+  },
+  {
     title: 'AI & Data Researcher',
     company: 'Florida State University',
     range: 'June 2024 – September 2024',
