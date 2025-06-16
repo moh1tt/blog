@@ -1,6 +1,6 @@
 ---
 name: Mohit Appari
-avatar: /static/images/avatar.jpg
+avatar: /static/images/Profile.jpg
 occupation: Data Scientist
 company: APD, Florida
 email: mohitt.appari@gmail.com
