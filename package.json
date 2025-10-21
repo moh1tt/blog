@@ -7,6 +7,9 @@
     "email": "mohitt.appari@gmail.com",
     "url": ""
   },
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "start": "cross-env SOCKET=true node ./scripts/next-remote-watch.js ./data",
     "dev": "next dev",
