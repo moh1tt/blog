@@ -1,6 +1,6 @@
 const experienceData = [
   {
-    title: 'Data Scientist',
+    title: 'Data Analyst',
     company: 'APD',
     range: 'June 2025 – Present',
     text1:
@@ -11,7 +11,7 @@ const experienceData = [
       'Worked within the Data and Quality Unit to ensure data accuracy and reportability; created statistical summary tables and insights that highlighted discrepancies in claims and expenses, improving data reliability and enhancing forecasting precision across APD financial workflows.',
   },
   {
-    title: 'AI & Data Researcher',
+    title: 'AI Researcher',
     company: 'Florida State University',
     range: 'June 2024 – September 2024',
     text1:
@@ -22,7 +22,7 @@ const experienceData = [
       'Collaborated with PhD researchers in Chemistry to align data science workflows with experimental research goals, enhancing interdisciplinary research on AI-driven material discovery and energy storage.',
   },
   {
-    title: 'Data Scientist',
+    title: 'Associate Software Developer',
     company: 'S&P Global',
     range: 'January 2022 – June 2023',
     text1:
@@ -33,7 +33,7 @@ const experienceData = [
       'Collaborated with cross-functional stakeholders to optimize data extraction logic and implement NLP-based entity recognition, resulting in improved reporting accuracy and reduced document processing turnaround times.',
   },
   {
-    title: 'SDE Intern',
+    title: 'Software Developer',
     company: 'LG',
     range: 'May 2021 – August 2021',
     text1:
@@ -44,7 +44,7 @@ const experienceData = [
       'Presented the project to LG leadership and engineering teams, receiving commendation for practical application and technical innovation.',
   },
   {
-    title: 'SDE Intern',
+    title: 'Software Developer',
     company: 'ITC',
     range: 'January 2021 – March 2021',
     text1:
