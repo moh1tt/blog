@@ -30,9 +30,14 @@ export default function Home({ posts }) {
             <h2 className="prose pt-5 text-lg text-gray-600 dark:text-gray-300">
               {`Welcome to ${siteMetadata.description}.`}
             </h2>
-
-            <p className="hidden pt-10 text-lg leading-7 text-slate-600 dark:text-slate-300 md:block">
-              You'll find posts on topics I love from
+            <p className="hidden pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300 md:block">
+              I'm an experienced developer and a data scientist with a passion for finance, trading
+              and quantitative analysis. Currently working as a data analyst at apd, where a typical
+              day involves diving into data, analyzing and processing it to drive insights and
+              support decision-making.
+            </p>
+            <p className="hidden pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300 md:block">
+              Outside of work, I'm building
               <br />
               <RoughNotation
                 animate="true"
@@ -44,11 +49,11 @@ export default function Home({ posts }) {
                 className="text-slate-200"
                 strokeWidth={1}
               >
-                algorithmic trading, LLMs, time series to the occasional deep dive into gaming,
-                anime, or{' '}
+                <strong>ATLAS</strong> a systematic trading platform written in native python,
+                designed to be fast, flexible and scalable.{' '}
               </RoughNotation>
-              something I'm currently building. Whether you're here to geek out over models, read a
-              tutorial, or just explore ideas — I’m glad you made it. Enjoy the read!{' '}
+              A personal playground to research, implement trading strategies, backtest and
+              papertrade, all in one unified platform integrating ai and data driven insights.{' '}
               <div className="mt-8 text-slate-600 dark:text-slate-400">
                 <span className="text-sm">Press</span>{' '}
                 <span className="rounded-md bg-gray-300 p-1 text-sm text-gray-900 dark:bg-gray-400">

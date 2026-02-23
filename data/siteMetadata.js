@@ -2,8 +2,7 @@ const siteMetadata = {
   title: 'Blog | Mohit Appari',
   author: 'Mohit Appari',
   headerTitle: 'The Journey',
-  description:
-    'my personal blog — a space where finance meets data, and curiosity powers innovation. I explore the intersection of quant finance, data engineering, and machine learning, sharing projects, insights, and real-world applications of financial engineering',
+  description: 'my personal blog! A place where data meets finance and curiosity powers innovation',
   snippets: 'Reuseable code snippets collected by Mohit',
   language: 'en-us',
   theme: 'system', // system, dark or light
