@@ -1,5 +1,18 @@
 const projectsData = [
   {
+    title: 'RegimeSense',
+    description: `Adaptive regime-switching trading system that classifies market conditions into 4 states (bull, choppy, high-vol trend, crisis) using a Gaussian Hidden Markov Model trained on 5,032 trading days. Dynamically allocates across a momentum/mean-reversion/trend/defensive strategy pool via HMM posterior probabilities — achieving OOS Sharpe 0.769 vs 0.641 for pure momentum with max drawdown reduced from -33.7% to -25.6%. Live paper trading on Alpaca with automated weekly rebalancing.`,
+    imgSrc: '',
+    href: 'https://moh1tt.xyz/blog/regimesense',
+    github: 'https://github.com/moh1tt/RegimeSense',
+    tech1: 'Python',
+    tech2: 'HMM',
+    tech3: 'Alpaca',
+    tech4: 'scikit-learn',
+    tech5: 'pandas',
+    tech6: 'GitHub Actions',
+  },
+  {
     title: 'BayWheels',
     description: `End-to-End data engineering pipeline that processes and analyzes BayWheels bike sharing data. Built with modern data engineering tools to streamline the process of data ingestion, processing, and analysis.`,
     imgSrc: '',

@@ -28,17 +28,13 @@ export default function Home({ posts }) {
               <span className="text-primary-color-500 dark:text-primary-color-dark-500">Mohit</span>
             </h1>
             <h2 className="prose pt-5 text-lg text-gray-600 dark:text-gray-300">
-              {`Welcome to ${siteMetadata.description}.`}
+              {`${siteMetadata.description}`}
             </h2>
             <p className="hidden pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300 md:block">
-              I'm an experienced developer and a data scientist with a passion for finance, trading
-              and quantitative analysis. Currently working as a data analyst at apd, where a typical
-              day involves diving into data, analyzing and processing it to drive insights and
-              support decision-making.
+              I build things at the intersection of data and finance — trading systems, factor
+              models, pipelines, and research tools. Always looking for the edge.
             </p>
             <p className="hidden pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300 md:block">
-              Outside of work, I'm building
-              <br />
               <RoughNotation
                 animate="true"
                 type="highlight"
@@ -49,11 +45,13 @@ export default function Home({ posts }) {
                 className="text-slate-200"
                 strokeWidth={1}
               >
-                <strong>ATLAS</strong> a systematic trading platform written in native python,
-                designed to be fast, flexible and scalable.{' '}
-              </RoughNotation>
-              A personal playground to research, implement trading strategies, backtest and
-              papertrade, all in one unified platform integrating ai and data driven insights.{' '}
+                This blog is a collection of everything I am — the code I write, the markets I think
+                about, and the ideas I can't stop chasing.{' '}
+              </RoughNotation>{' '}
+              <br />
+              <br />
+              Thanks for stopping by—I appreciate you checking out my work. If you ever want to
+              connect, collaborate, or just say hi, feel free to reach out. Enjoy the read!
               <div className="mt-8 text-slate-600 dark:text-slate-400">
                 <span className="text-sm">Press</span>{' '}
                 <span className="rounded-md bg-gray-300 p-1 text-sm text-gray-900 dark:bg-gray-400">
@@ -158,7 +156,7 @@ export default function Home({ posts }) {
               <div className="my-2 grid items-start gap-8">
                 <div className="group relative">
                   <div className="animate-tilt absolute -inset-0.5 rounded-lg bg-gradient-to-r  from-pink-600 to-purple-600 opacity-50 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
-                  <Link href="https://drive.google.com/file/d/1zEzWPveXFdC45x7nvTQYIT__Zt2xgHAh/view?usp=sharing">
+                  <Link href="https://drive.google.com/file/d/1f9HFK4GJvPGaHJZMp2iGBq149ToFAVK9/view?usp=sharing">
                     <span className="relative flex items-center divide-x divide-gray-600 rounded-lg bg-white px-7 py-4 leading-none dark:bg-black">
                       <span className="flex items-center space-x-5">
                         <svg

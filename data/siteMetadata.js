@@ -2,7 +2,7 @@ const siteMetadata = {
   title: 'Blog | Mohit Appari',
   author: 'Mohit Appari',
   headerTitle: 'The Journey',
-  description: 'my personal blog! A place where data meets finance and curiosity powers innovation',
+  description: 'Data scientist with a deep obsession with markets.',
   snippets: 'Reuseable code snippets collected by Mohit',
   language: 'en-us',
   theme: 'system', // system, dark or light

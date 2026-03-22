@@ -73,7 +73,7 @@ export default function AuthorLayout({ children, frontMatter }) {
             </p>
 
             <p className="hidden md:block">
-              Few things I love?
+              Outside of work,
               <RoughNotation
                 animationDelay="1000"
                 animationDuration="3000"
@@ -84,7 +84,7 @@ export default function AuthorLayout({ children, frontMatter }) {
               >
                 <span className="text-black dark:text-white">
                   {' '}
-                  Coffee, Anime, Gaming, Videography and Working With Data!{' '}
+                  I enjoy exploring cafés, gaming, photography, and going on nature walks.{' '}
                 </span>
               </RoughNotation>
               {/* <RoughNotation
@@ -144,6 +144,10 @@ export default function AuthorLayout({ children, frontMatter }) {
               </Link>
               .&nbsp; I'm always eager to connect, exchange ideas, and explore new avenues of
               exploration and growth together.
+            </p>
+            <p>
+              Check out some of my photography work on{' '}
+              <Link href="https://vsco.co/moh1tttt/gallery">VSCO</Link>.
             </p>
 
             <br />

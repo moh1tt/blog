@@ -2,57 +2,57 @@ const experienceData = [
   {
     title: 'Data Analyst',
     company: 'APD',
-    range: 'June 2025 – Present',
+    range: 'June 2024 – Present',
     text1:
-      'Conducted in-depth statistical analysis using SPSS, SAS, and R on large-scale datasets related to individuals with disabilities, identifying regional trends, billing anomalies, and compliance issues that informed regulatory reporting and strategic decision-making.',
+      'Authored and maintained 40+ automated reporting pipelines across daily, weekly, monthly, quarterly, and annual cadences — built in Python, R, SQL, and SPSS, processing client, service, provider, and waiver enrollment data from Azure Data Warehouse and SQL Server for distribution to 50+ staff and senior leadership.',
     text2:
-      'Developed interactive dashboards in Tableau, Power BI, and Excel to visualize KPIs, forecast trends, and track operational performance, streamlining executive reporting and supporting agency-wide transparency.',
+      'Managed analytics and built forecasting models for ~$190–200M in annual program payments and budget allocations across 60,000+ clients, producing compliance tracking reports and fiscal planning outputs to support statutory deadline adherence and regulatory reporting.',
     text3:
-      'Worked within the Data and Quality Unit to ensure data accuracy and reportability; created statistical summary tables and insights that highlighted discrepancies in claims and expenses, improving data reliability and enhancing forecasting precision across APD financial workflows.',
+      'Optimized SQL data extraction pipelines via query partitioning, datetime filtering, and cache clearing, reducing data pull time from ~1 hour to under 10 minutes (83% faster), directly accelerating reporting turnaround across all cadences.',
   },
   {
-    title: 'AI Researcher',
+    title: 'Research Assistant',
     company: 'Florida State University',
     range: 'June 2024 – September 2024',
     text1:
-      'Researched open-source generative AI models, algorithms (GANs, VAEs, RNNs) to explore synthetic data generation for material property prediction and battery optimization applications.',
+      'Researched generative models (GANs, VAEs, RNNs, Diffusion) under Dr. Bin Ouyang for synthetic molecular data generation, focused on discovering stable, sustainable materials for lithium-ion battery applications using AI-driven compound synthesis.',
     text2:
-      'Implemented and benchmarked NequIP (MIT Open Source) for molecular stability prediction using a dataset of 11,000+ materials; improved prediction consistency by∼15% during initial validation. View more at https://bin-ouyang.com/people/',
+      'Implemented and benchmarked NequIP (MIT open-source neural equivariant potential) on an 11,000+ material dataset, then applied the model to a custom dataset.',
     text3:
-      'Collaborated with PhD researchers in Chemistry to align data science workflows with experimental research goals, enhancing interdisciplinary research on AI-driven material discovery and energy storage.',
-  },
-  {
-    title: 'Associate Software Developer',
-    company: 'S&P Global',
-    range: 'January 2022 – June 2023',
-    text1:
-      'Engineered scalable Python pipelines using pdfplumber, Camelot, Tesseract, and Amazon Textract to extract structured data from 10,000+ complex financial and automotive documents, reducing manual processing time and costs by over 90%.',
-    text2:
-      'Automated web data extraction workflows by scripting robust scraping and parsing logic in Python, deploying solutions to internal servers with scheduled execution, and implementing custom error handling to ensure reliable data ingestion across financial sources.',
-    text3:
-      'Collaborated with cross-functional stakeholders to optimize data extraction logic and implement NLP-based entity recognition, resulting in improved reporting accuracy and reduced document processing turnaround times.',
+      'Collaborated with PhD researchers to align data science workflows with experimental research goals, contributing to interdisciplinary work on AI-driven material discovery and energy storage.',
   },
   {
     title: 'Software Developer',
-    company: 'LG',
+    company: 'S&P Global',
+    range: 'January 2022 – August 2023',
+    text1:
+      'Independently researched, wrote, tested, and deployed a full migration of legacy .NET data extraction pipelines to Python, owning the entire lifecycle from proof-of-concept to production for a team of 8 across the Capture pipeline.',
+    text2:
+      'Engineered automated document extraction pipelines using OCR, image recognition, regex, and Grooper to process 10,000+ daily files (PDFs, TIFs, images) across oil & gas, energy, manufacturing, and automotive sectors, formatting raw documents into structured, analytics-ready outputs.',
+    text3:
+      'Deployed production pipelines to live servers with automated file-drop triggers, integrated final outputs into Power BI for downstream visualization, and maintained delivery cadence through daily DevOps board management and cross-team sprint deadlines.',
+  },
+  {
+    title: 'Software Developer Intern',
+    company: 'LG Electronics',
     range: 'May 2021 – August 2021',
     text1:
-      'Participated in a 2-month LG internship combining webOS training and a hackathon, developing a smart logistics and safety solution.',
+      'Built a proof-of-concept LG WebOS logistics platform in a 2-week ideathon, integrating real-time shipment tracking, live delay and congestion feeds, and a computer vision drowsiness detection system (Python, OpenCV, YOLO) achieving 90% facial landmark accuracy for driver safety.',
     text2:
-      'Built a real-time drowsiness detection system using Python, OpenCV, YOLO, and Raspberry Pi, achieving 90% facial landmark accuracy to enhance driver safety. Designed a logistics tracking system using CNNs and REST APIs with PostgreSQL, reducing sorting time by 25% and securing 3rd place in LG’s Ideathon.',
+      'Designed and integrated a CNN-based object recognition module with REST APIs and PostgreSQL for automated package sorting, reducing sorting time by 25% across the logistics workflow.',
     text3:
-      'Presented the project to LG leadership and engineering teams, receiving commendation for practical application and technical innovation.',
+      'Awarded 3rd place out of all competing teams. Presented the solution to LG leadership and engineering teams, receiving commendation for practical application and technical innovation.',
   },
   {
-    title: 'Software Developer',
-    company: 'ITC',
+    title: 'Software Developer Intern',
+    company: 'ITC Limited',
     range: 'January 2021 – March 2021',
     text1:
-      'Developed a master data management system using Python (Flask) and MySQL, enabling multi-role access for vendors, users, managers, and administrators as an intern. Implemented role-based authentication and approval workflows to enhance data security and streamline user operations.',
+      'Built a Master Data Management system using the MERN stack with role-based authentication (admins, users, vendors) to manage commodity tracking and application workflows across multiple ITC business units.',
     text2:
-      'Automated product tracking and data updates, reducing manual workload by 30% and improving data accuracy across business units.',
+      'Implemented approval workflows and role-based access controls to enhance data security and streamline user operations across business units.',
     text3:
-      'Collaborated with backend teams to integrate APIs and support cross-platform data synchronization for operational efficiency.',
+      'Automated product tracking and data updates, reducing manual workload and improving cross-unit data accuracy through API integrations and backend synchronization.',
   },
 ]
 
