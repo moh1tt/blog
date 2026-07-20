@@ -2,13 +2,13 @@ const experienceData = [
   {
     title: 'Data Analyst',
     company: 'APD',
-    range: 'June 2024 – Present',
+    range: 'June 2025 – Present',
     text1:
-      'Authored and maintained 40+ automated reporting pipelines across daily, weekly, monthly, quarterly, and annual cadences — built in Python, R, SQL, and SPSS, processing client, service, provider, and waiver enrollment data from Azure Data Warehouse and SQL Server for distribution to 50+ staff and senior leadership.',
+      'Designed and implemented Python/SQL-based analytical workflows to transform ambiguous operational questions into structured statistical analyses, automating SPSS execution and validation to support evidence-based decision-making across programs.',
     text2:
-      'Managed analytics and built forecasting models for ~$190–200M in annual program payments and budget allocations across 60,000+ clients, producing compliance tracking reports and fiscal planning outputs to support statutory deadline adherence and regulatory reporting.',
+      'Built and maintained 40+ automated ETL pipelines processing 300,000+ records (Python, SQL Server, Azure Data Warehouse, Docker), implementing data validation and lineage tracking to ensure reliability for downstream statistical and trend analysis.',
     text3:
-      'Optimized SQL data extraction pipelines via query partitioning, datetime filtering, and cache clearing, reducing data pull time from ~1 hour to under 10 minutes (83% faster), directly accelerating reporting turnaround across all cadences.',
+      'Conducted time-series trend and anomaly analysis on operational metrics to detect spikes and shifts linked to system changes, translating findings into actionable insights for 50+ stakeholders via Power BI and Tableau dashboards — while optimizing SQL query performance to cut analytical report latency by 83% (60 min to under 10 min).',
   },
   {
     title: 'Research Assistant',
@@ -17,20 +17,20 @@ const experienceData = [
     text1:
       'Researched generative models (GANs, VAEs, RNNs, Diffusion) under Dr. Bin Ouyang for synthetic molecular data generation, focused on discovering stable, sustainable materials for lithium-ion battery applications using AI-driven compound synthesis.',
     text2:
-      'Implemented and benchmarked NequIP (MIT open-source neural equivariant potential) on an 11,000+ material dataset, then applied the model to a custom dataset.',
+      'Benchmarked and fine-tuned deep learning models (NequIP) via transfer learning across an 11,000+ material dataset, improving prediction consistency by 15% through iterative experimentation and hyperparameter optimization.',
     text3:
-      'Collaborated with PhD researchers to align data science workflows with experimental research goals, contributing to interdisciplinary work on AI-driven material discovery and energy storage.',
+      'Designed and executed controlled experiments across multiple model architectures using A/B testing and statistical comparison methods, tracked via MLflow, ensuring rigorous, reproducible model evaluation and informing experimentation design practices.',
   },
   {
     title: 'Software Developer',
     company: 'S&P Global',
-    range: 'January 2022 – August 2023',
+    range: 'January 2022 – June 2023',
     text1:
-      'Independently researched, wrote, tested, and deployed a full migration of legacy .NET data extraction pipelines to Python, owning the entire lifecycle from proof-of-concept to production for a team of 8 across the Capture pipeline.',
+      'Built a production-grade data extraction platform processing 10,000+ documents/day, combining OCR and CNN-based classification models to convert unstructured PDFs and scanned documents into structured datasets for downstream analysis and modeling.',
     text2:
-      'Engineered automated document extraction pipelines using OCR, image recognition, regex, and Grooper to process 10,000+ daily files (PDFs, TIFs, images) across oil & gas, energy, manufacturing, and automotive sectors, formatting raw documents into structured, analytics-ready outputs.',
+      'Engineered cloud-based data pipelines (AWS S3, Athena, BigQuery) to ingest, transform, and serve large-scale datasets, enabling analysts and downstream models to access up-to-date structured data within minutes.',
     text3:
-      'Deployed production pipelines to live servers with automated file-drop triggers, integrated final outputs into Power BI for downstream visualization, and maintained delivery cadence through daily DevOps board management and cross-team sprint deadlines.',
+      'Designed a modular, reusable Python extraction framework with CDC-based updates and 80% test coverage, and developed REST API integrations with schema validation and CI/CD (GitHub Actions) to improve data quality and deployment reliability.',
   },
   {
     title: 'Software Developer Intern',

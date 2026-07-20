@@ -31,10 +31,11 @@ export default function Home({ posts }) {
               {`${siteMetadata.description}`}
             </h2>
             <p className="hidden pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300 md:block">
-              I love working at the intersection of data and finance — building trading systems,
-              researching factor models, and digging into the mathematics behind derivatives. I'm
-              constantly picking up new tools, exploring new ideas, and shipping things that
-              actually work.
+              I work at the intersection of forecasting, time series modeling, and causal inference
+              — turning messy operational and market data into decisions that hold up under
+              scrutiny. Recent projects include a multi-domain probabilistic demand forecasting
+              engine (DeepAR, quantile forecasts, cold-start handling) and a causal experimentation
+              platform for marketplace and supply chain dynamics.
             </p>
             <p className="hidden pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300 md:block">
               <RoughNotation
@@ -47,8 +48,8 @@ export default function Home({ posts }) {
                 className="text-slate-200"
                 strokeWidth={1}
               >
-                This blog is a collection of everything I am — the code I write, the markets I think
-                about, and the ideas I can't stop chasing.{' '}
+                This blog is a collection of everything I am — the code I write, the models I build,
+                and the ideas I can't stop chasing.{' '}
               </RoughNotation>{' '}
               <br />
               <br />
@@ -67,34 +68,6 @@ export default function Home({ posts }) {
               </div>
             </p>
           </div>
-          {/* <div className="h-content sm:h-content-sm flex flex-col justify-around">
-            <h1 className="sm:text-8.5xl tracking-tightest my-28 select-none text-center text-6xl font-extrabold leading-none sm:my-10">
-              <span
-                data-content="Blog."
-                className="relative block before:absolute before:top-0 before:bottom-0 before:left-0 before:block before:w-full before:animate-gradient-background-1 before:px-2 before:text-center before:text-black before:content-[attr(data-content)] dark:before:text-white dark:before:content-[attr(data-content)]"
-              >
-                <span className="animate-gradient-foreground-1 bg-gradient-to-br from-gradient-1-start to-gradient-1-end bg-clip-text px-2 text-transparent">
-                  Blog.
-                </span>
-              </span>
-              <span
-                data-content="Coding."
-                className="relative block before:absolute before:top-0 before:bottom-0 before:left-0 before:block before:w-full before:animate-gradient-background-2 before:px-2 before:text-center before:text-black before:content-[attr(data-content)] dark:before:text-white dark:before:content-[attr(data-content)]"
-              >
-                <span className="animate-gradient-foreground-2 bg-gradient-to-br from-gradient-2-start to-gradient-2-end bg-clip-text px-2 text-transparent">
-                  Coding.
-                </span>
-              </span>
-              <span
-                data-content="Portfolio."
-                className="relative block before:absolute before:top-0 before:bottom-0 before:left-0 before:block before:w-full before:animate-gradient-background-3 before:px-2 before:text-center before:text-black before:content-[attr(data-content)] dark:before:text-white dark:before:content-[attr(data-content)]"
-              >
-                <span className="animate-gradient-foreground-3 bg-gradient-to-br from-gradient-3-start to-gradient-3-end bg-clip-text px-2 text-transparent">
-                  Portfolio.
-                </span>
-              </span>
-            </h1>
-          </div> */}
           <div className="flex items-center justify-center">
             <div className="grid grid-cols-1 grid-rows-3 gap-8 py-12">
               <div className="my-2 grid items-start gap-8">
@@ -158,7 +131,7 @@ export default function Home({ posts }) {
               <div className="my-2 grid items-start gap-8">
                 <div className="group relative">
                   <div className="animate-tilt absolute -inset-0.5 rounded-lg bg-gradient-to-r  from-pink-600 to-purple-600 opacity-50 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
-                  <Link href="https://drive.google.com/file/d/1K1POiXkGubF3q7w3jE88-N7_AH4K0oyw/view?usp=sharing">
+                  <Link href="/static/resume/Mohit_Appari.pdf">
                     <span className="relative flex items-center divide-x divide-gray-600 rounded-lg bg-white px-7 py-4 leading-none dark:bg-black">
                       <span className="flex items-center space-x-5">
                         <svg
