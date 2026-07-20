@@ -1,41 +1,99 @@
 ---
-title: How I used RAG based LLM to help me with my course projects on Applied Machine Learning (STA5635 )
+title: Building a RAG-Based LLM Q&A App - LangChain, OpenAI, and Pinecone
 date: '03-12-2024'
-tags: [Tech, Data, ML, LLMs, Langchain, OpenAPI, Pinecone, VectorDBs]
+tags: [Data-Science, Machine-Learning, LLMs, RAG, Langchain, OpenAI, Pinecone, VectorDBs]
 draft: false
-summary: Internal working of a RAG based LLM and utilizing Vector embeddings using OpenAI APIs and Langchain to custom train a LLM for my course projects on Applied Machine Learning.
+summary: 'How Retrieval-Augmented Generation works under the hood, and a practical walkthrough building a RAG-based LLM Q&A app with LangChain, OpenAI, and Pinecone for a graduate ML course.'
 ---
 
-`RAG`, `LLMs`, `Langchain`, `OpenAPI`, `Pinecone`, `VectorDBs` sounds like a lot of jargon, right? Well, it is! But don't worry, I will explain everything in this blog post and by the end of it
-you should be able to build and deploy your very own LLM built on top of your custom data.
-Thanks to Krish Naik for such informative article on Langchain.
+`RAG`, `LLMs`, `LangChain`, `OpenAI`, `Pinecone`, `Vector DBs` — sounds like a lot of jargon, right? By the end of this
+post you'll understand how each piece fits together, and have a working RAG-based LLM app built on your own data.
 
-This blog is gonna be a practical walk through on building a RAG based LLM using OpenAI and Pinecone. If you
-wanna delve deeper and get a better understanding of behind the working of RAG based LLMs QA Bots I suggest looking
-at my other blog post on [Behind the scenes of a RAG based LLM powered QAChatBot - LangChain - GPT4](https://moh1tt.vercel.app/blog/QABot).
+Thanks to Alex Litvinov for the informative walkthrough on [Building ZoomcampQABot](https://www.youtube.com/watch?v=QhFLeZV-PVk)
+and to Krish Naik for the LangChain deep dive that this project builds on.
 
-So, Let's get started!
+## What is Retrieval-Augmented Generation (RAG)?
 
-## About the project
+Large language models have undergone a remarkable boom in recent years, reshaping natural language processing and AI more
+broadly. Models like OpenAI's GPT series and Google's BERT are characterized by their scale — often billions or trillions
+of parameters — and their ability to understand and generate human-like text at unprecedented complexity.
 
-<img src="/static/images/Blog/sta-app.png" alt="sta-arch"></img>
-This project is going to have a RAG based architechture where we will query our question to the LLM
-with some context on our own data as well and few system prompts.{' '}
+But what if you want the model to reason over your _own_ data — lecture notes, internal docs, a codebase — rather than
+just what it was trained on? That's where RAG comes in.
 
-To keep up with the project, you can download or clone my [github repo](https://github.com/moh1tt/langchain-qa-sta5635).
+RAG is an architectural approach that improves the usefulness of LLM applications by retrieving documents relevant to a
+question and feeding them to the model as context, instead of relying solely on what's baked into its weights. It's
+particularly effective for support chatbots and Q&A systems that need up-to-date or domain-specific knowledge.
 
-## Setting up the environment
+<img
+  className="inline"
+  src="/static/images/Blog/Langchain-pipeline.png"
+  alt="LangChain RAG pipeline"
+/>
 
-To begin with, let's get all the required libraries and accounts that are gonna be used in this project.
+RAG consists of three main stages:
 
-- We're gonna create a `virtual environment` using
+- **Ingestion** — done offline, before any user question arrives. Data is collected from its source, split into smaller
+  chunks, and embedded into a vector database. This enables `semantic search` (retrieval based on meaning, not just
+  keyword overlap).
+- **Retrieval** — given a user's query, run a semantic search against the vector database to pull the most relevant
+  chunks.
+- **Generation** — construct a final prompt combining the query and retrieved context, and pass it to the LLM to produce
+  an answer.
+
+In short, RAG can be thought of as automated, data-aware prompt engineering.
+
+<img className="inline" src="/static/images/Blog/rag-promt.png" alt="RAG prompt construction" />
+
+## What is LangChain?
+
+LangChain connects an LLM like GPT-4 to your own data source — anything from a single PDF to an entire database — and
+provides the plumbing shown in the diagram above: chunking, embedding, retrieval, and chaining it all into a single
+callable pipeline that can both answer questions and take actions based on those answers.
+
+- It offers modules for model interaction, data connection/retrieval, chains, and agents, covering most of what's needed
+  to build production NLP apps.
+- It's used across customer support chatbots, coding assistants, healthcare diagnostics, marketing tools, and more.
+- In short, it's a framework that turns the RAG architecture above into a few composable building blocks instead of a
+  pile of custom glue code.
+
+<img className="inline" src="/static/images/Blog/langchain-home.png" alt="LangChain overview" />
+
+## Why a vector database?
+
+To feed relevant context to the model alongside a query, you need a fast way to find the most relevant chunks of your
+data. That's the job of a vector database — it converts data into vectors, indexes them, and enables low-latency
+similarity search over high-dimensional embeddings.
+
+Vector databases matter for RAG because they efficiently store, manage, and index this high-dimensional data, which is
+what makes retrieval both fast and accurate at scale. Common features include efficient storage, scalability, query
+optimization, and integration with frameworks like LangChain.
+
+One popular option is `Pinecone`, which has solid documentation and first-class LangChain integration — it's what I used
+for the project below.
+
+<img className="inline" src="/static/images/Blog/pinecone.png" alt="Pinecone vector database" />
+
+## The project: a RAG helper for course material
+
+With the concepts out of the way, here's how I applied them to something concrete: a RAG-based Q&A app over my own
+lecture notes and slides for a graduate Applied Machine Learning course (STA5635).
+
+<img src="/static/images/Blog/sta-app.png" alt="Project architecture" />
+
+The app queries an LLM with the user's question plus relevant context retrieved from my own course material, combined
+with a system prompt. You can clone the full project from my [GitHub repo](https://github.com/moh1tt/langchain-qa-sta5635).
+
+### Setting up the environment
+
+Create a virtual environment:
 
 ```bash
 python3 -m venv venv
 source venv/bin/activate
 ```
 
-- Then we're gonna create a `requirements.txt` file
+Add a `requirements.txt`:
 
 ```bash
 langchain
@@ -50,13 +108,14 @@ cohere
 streamlit
 ```
 
-These are the libraries required for this project. Add them to the requirements.txt file and install them using
+Install everything:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-- We're gonna be using OpenAI's API for the LLM and Pinecone DB for storing the data. Also we're gonna need Cohere to embed our data. So, you need to have an account on these platforms. To store and access these keys in a safe way, we would create a `.env` file.
+This project uses OpenAI for the LLM, Pinecone for the vector store, and Cohere for embeddings — so you'll need
+accounts on all three. Store the keys in a `.env` file (and make sure it's gitignored):
 
 ```bash
 OPENAI_API_KEY=
@@ -66,26 +125,19 @@ COHERE_API_KEY=
 PINECONE_ENVIRONMENT=
 ```
 
-These are the environment variables that we'll be using.
+Create accounts on [OpenAI](https://beta.openai.com/signup/), [Pinecone](https://www.pinecone.io/), and
+[Cohere](https://cohere.ai/) to get these keys.
 
-- Create accounts on [OpenAI](https://beta.openai.com/signup/), [Pinecone](https://www.pinecone.io/) and [Cohere](https://cohere.ai/). Once you have the accounts, you can get the API keys and store them in the `.env` file.
+### Ingesting the source data
 
-Now that we have our environment setup, let's move on to the next step.
+My data was a folder of PDFs — lecture notes and slides. The format doesn't matter much; this same pipeline works for
+CSV, JSON, plain text, or API responses.
 
-## Ingesting the data from your files.
+<img src="/static/images/Blog/sta-flow.png" alt="Data ingestion flow" />
 
-In my case, the data I had were a bunch of pdfs. Lecture notes and slides that we're provided by our professor.
-The data can be in any format, it can be a csv, json, pdf, txt, apis etc.
-
-The architecture that we're gonna follow can be seen below.
-
-<img src="/static/images/Blog/sta-flow.png" alt="sta-flow"></img>
-
-For this project, We're gonna use `pypdf` to extract the text from the pdfs and then we're gonna use `cohere` to embed the data.
+I used `pypdf` to extract text from the PDFs and `Cohere` to embed it:
 
 ```python
-# Extracting texts from pdfs
-
 # Reading pdfs
 def read_pdf(file_path):
     loader = PyPDFLoader(file_path)
@@ -98,29 +150,22 @@ def process_documents(documents):
     doc_text = ''
     for doc in documents:
         text = doc.page_content
-
-        # preprocess
         text = clean_text(text)
         doc_text += text
     return doc_text
 
+
 # Preprocess the text
 def clean_text(text):
-    # Replace newline characters with spaces
     text = text.replace('\n', ' ')
-    # Remove unknown characters
     text = ''.join(c for c in text if unicodedata.category(c) != 'Co')
-    # Remove extra whitespace
     text = re.sub(r'\s+', ' ', text).strip()
-    # Remove non-alphanumeric characters
     text = re.sub(r'[^a-zA-Z0-9\s]', '', text)
-    # Convert to lowercase
     text = text.lower()
     return text
 
 
-
-# Load and process all PDF files in the the directory
+# Load and process all PDF files in the directory
 pdf_dir_path = "pdfs/"
 
 all_texts = []
@@ -132,17 +177,13 @@ for filename in os.listdir(pdf_dir_path):
         all_texts.append(texts)
 ```
 
-The above code is gonna give us all the texts as a list of texts from pdfs.
+That gives us a list of cleaned texts extracted from every PDF in the directory.
 
-once we have all the text we need, we move on to embed them.
+### Embedding the data
 
-## Embedding the data
-
-There are many ways to embed data, one way is to use `OpenAi`'s embedding but for this project we're gonna use `Cohere` as mentioned in pinecone's
-documentation.
+OpenAI's embeddings would work here too, but I used Cohere, following Pinecone's own documentation:
 
 ```python
-# Create embeddings
 def embed(text):
     embeds = co.embed(
         texts=text,
@@ -152,43 +193,11 @@ def embed(text):
     ).embeddings
     return embeds
 
-# Create embeddings
 embeds = embed(all_texts)
 ```
 
-The above code is gonna give us the embeddings of the data.
-To know more about embeddings and how they work, you can visit [Cohere's documentation](https://cohere.com/).
-
-## Upserting the data to Pinecone
-
-Once we have the embeddings, we can upsert the data to Pinecone. You can follow the [documentation](https://docs.pinecone.io/docs/upsert-data) provided on pinecone.
-
-```python
-# Uploading data in batches
-
-# Define the "index" variable here or make sure it is accessible in the current scope
-
-batch_size = 128
-
-ids = [str(i) for i in range(shape[0])]
-# create list of metadata dictionaries
-meta = [{'text': text} for text in all_texts]
-
-# create list of (id, vector, metadata) tuples to be upserted
-to_upsert = list(zip(ids, embeds, meta))
-
-for i in range(0, shape[0], batch_size):
-    i_end = min(i+batch_size, shape[0])
-    index.upsert(vectors=to_upsert[i:i_end])
-
-# let's view the index statistics
-print(index.describe_index_stats())
-```
-
-We try to upsert in batches to avoid large uploads and cause errors.
-Also, be sure to check the index dimensions because you have to create and specify them when creating an index in pinecone.
-
-To check the `dimensions`, you can use the following code.
+To check embedding dimensions before creating the Pinecone index (the index needs to be created with the matching
+dimension):
 
 ```python
 import numpy as np
@@ -197,24 +206,37 @@ shape = np.array(embeds).shape
 print(shape)
 ```
 
-This tells us the dimensions of the embeddings that will be created.
+### Upserting to Pinecone
 
-Now that we have our database ready, we can move on to the next step.
-
-## Creating the RAG based LLM
-
-Now all we have to do is query user's question based on the context retrieved from the similarity search from pinecone
-and the system prompts.
+Once embeddings are ready, upsert them in batches to avoid timeouts on large uploads:
 
 ```python
-# RAG prompt
+batch_size = 128
+
+ids = [str(i) for i in range(shape[0])]
+meta = [{'text': text} for text in all_texts]
+to_upsert = list(zip(ids, embeds, meta))
+
+for i in range(0, shape[0], batch_size):
+    i_end = min(i + batch_size, shape[0])
+    index.upsert(vectors=to_upsert[i:i_end])
+
+print(index.describe_index_stats())
+```
+
+Full details on upserting are in [Pinecone's documentation](https://docs.pinecone.io/docs/upsert-data).
+
+### Building the RAG chain
+
+With the vector store populated, the last step is chaining retrieval, prompt construction, and generation:
+
+```python
 template = """Answer the question based only on the following context:
 {context}
 Question: {question}
 """
 prompt = ChatPromptTemplate.from_template(template)
 
-# RAG
 model = ChatOpenAI(temperature=0, model="gpt-4-1106-preview")
 
 chain = (
@@ -225,10 +247,7 @@ chain = (
 )
 ```
 
-The `chain` above makes us chain the `retriever` which is the context,
-`prompt` which is the question and `model` which is the LLM.
-
-If everything went well, you would successfully have created a RAG based LLM. We can query our question using,
+This chains together the `retriever` (context), `prompt` (the question), and `model` (the LLM). Querying it looks like:
 
 ```python
 chain.invoke("""Are the hidden states of the Hidden Markov Model discrete or continuous?
@@ -238,11 +257,10 @@ chain.invoke("""Are the hidden states of the Hidden Markov Model discrete or con
   Discrete""")
 ```
 
-## Deployment
+### Deployment
 
-To deploy my app, I used `streamlit` to quicky create a web app and hosted it on `hugging space`.
+I used `Streamlit` to turn this into a small web app and hosted it on Hugging Face Spaces. The Streamlit code lives in
+`app.py` in the [GitHub repo](https://github.com/moh1tt/langchain-qa-sta5635) — just remember to gitignore your `.env`
+before pushing.
 
-The code for streamlit can be found on my github repo as `app.py`.
-Be sure to add a `gitignore` and save your keys from getting exposed!
-
-Happy Learning! 🚀
+Happy learning! 🚀

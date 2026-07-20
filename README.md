@@ -55,9 +55,9 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## ✍️ Featured Posts
 
-- [Building a Stock Screener Using Python and Streamlit](https://moh1tt.xyz/blog/stocksSreener)
-- [Controlling Spotify with Hand Gestures Using OpenCV and MediaPipe](https://moh1tt.xyz/blog/SpotifyGesture)
-- [How I Built a Modern Gaming PC from Junk](https://moh1tt.xyz/blog/Optiplex5040)
+- [RegimeSense - Building an Adaptive Market Regime Detection System](https://moh1tt.xyz/blog/RegimeSense)
+- [Building a Stock Screener Using Python and Streamlit](https://moh1tt.xyz/blog/stocksScreener)
+- [Building a RAG-Based LLM Q&A App - LangChain, OpenAI, and Pinecone](https://moh1tt.xyz/blog/STA5635)
 
 ## 📬 Contact
 
