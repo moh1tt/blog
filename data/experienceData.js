@@ -1,6 +1,6 @@
 const experienceData = [
   {
-    title: 'Data Analyst',
+    title: 'Data Scientist',
     company: 'APD',
     range: 'June 2025 – Present',
     text1:
