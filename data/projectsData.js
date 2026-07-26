@@ -3,7 +3,7 @@ const projectsData = [
     title: 'Seeking Alpha',
     description: `Full-stack quantitative research platform combining a multi-factor equity scoring model (momentum, technical, fundamental, PEAD/event factors, cross-sectionally normalized) with a backtesting engine, regime filter, and live paper-trading execution across 500+ tickers via Alpaca API.`,
     imgSrc: '',
-    href: 'https://github.com/moh1tt/seeking-alpha',
+    href: 'https://medium.com/@moh1tt/i-built-a-quantitative-stock-research-platform-from-scratch-heres-everything-i-learned-b429b64caaad',
     github: 'https://github.com/moh1tt/seeking-alpha',
     tech1: 'Python',
     tech2: 'FastAPI',
