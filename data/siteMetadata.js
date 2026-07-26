@@ -2,7 +2,7 @@ const siteMetadata = {
   title: 'Blog | Mohit Appari',
   author: 'Mohit Appari',
   headerTitle: 'The Journey',
-  description: 'Data Scientist focused on forecasting, time series & causal ML.',
+  description: 'Data Scientist researching systematic trading strategies and quantitative finance.',
   snippets: 'Reuseable code snippets collected by Mohit',
   language: 'en-us',
   theme: 'system', // system, dark or light

@@ -31,11 +31,12 @@ export default function Home({ posts }) {
               {`${siteMetadata.description}`}
             </h2>
             <p className="hidden pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300 md:block">
-              I work at the intersection of forecasting, time series modeling, and causal inference
-              — turning messy operational and market data into decisions that hold up under
-              scrutiny. Recent projects include a multi-domain probabilistic demand forecasting
-              engine (DeepAR, quantile forecasts, cold-start handling) and a causal experimentation
-              platform for marketplace and supply chain dynamics.
+              I research systematic trading strategies grounded in academic factor literature —
+              Jegadeesh-Titman momentum, Fama-French/Carhart factors, Hamilton regime-switching
+              models — validated through rigorous backtesting. Recent work includes a Gaussian
+              HMM-based market regime detector (Sharpe 0.769 vs. 0.641, drawdown -25.6% vs. -33.7%)
+              and a full-stack quant research platform with a multi-factor scoring model,
+              backtesting engine, regime filter, and live paper-trading across 500+ tickers.
             </p>
             <p className="hidden pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300 md:block">
               <RoughNotation

@@ -1,5 +1,18 @@
 const projectsData = [
   {
+    title: 'Seeking Alpha',
+    description: `Full-stack quantitative research platform combining a multi-factor equity scoring model (momentum, technical, fundamental, PEAD/event factors, cross-sectionally normalized) with a backtesting engine, regime filter, and live paper-trading execution across 500+ tickers via Alpaca API.`,
+    imgSrc: '',
+    href: 'https://github.com/moh1tt/seeking-alpha',
+    github: 'https://github.com/moh1tt/seeking-alpha',
+    tech1: 'Python',
+    tech2: 'FastAPI',
+    tech3: 'Next.js',
+    tech4: 'DuckDB',
+    tech5: 'Alpaca API',
+    tech6: 'Backtesting',
+  },
+  {
     title: 'RegimeSense',
     description: `Adaptive regime-switching trading system that classifies market conditions into 4 states (bull, choppy, high-vol trend, crisis) using a Gaussian Hidden Markov Model trained on 5,032 trading days. Dynamically allocates across a momentum/mean-reversion/trend/defensive strategy pool via HMM posterior probabilities — achieving OOS Sharpe 0.769 vs 0.641 for pure momentum with max drawdown reduced from -33.7% to -25.6%. Live paper trading on Alpaca with automated weekly rebalancing.`,
     imgSrc: '',

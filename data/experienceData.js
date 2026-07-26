@@ -4,11 +4,11 @@ const experienceData = [
     company: 'APD',
     range: 'June 2025 – Present',
     text1:
-      'Designed and implemented Python/SQL-based analytical workflows to transform ambiguous operational questions into structured statistical analyses, automating SPSS execution and validation to support evidence-based decision-making across programs.',
+      'Performed forecasting and budgeting analysis on ~$200M in monthly financial transactions, producing charts, supporting data, and reports used for rate-change decisions and financial planning. Conducted research and trend analysis across a 60,000+ client base (state waiver program), tracking client movement between services, service utilization patterns, and data integrity issues.',
     text2:
-      'Built and maintained 40+ automated ETL pipelines processing 300,000+ records (Python, SQL Server, Azure Data Warehouse, Docker), implementing data validation and lineage tracking to ensure reliability for downstream statistical and trend analysis.',
+      'Built and maintained 40+ automated data pipelines processing 300K+ records (Python, SQL Server, Azure Data Warehouse, Docker), ensuring reliability for downstream forecasting and financial analysis.',
     text3:
-      'Conducted time-series trend and anomaly analysis on operational metrics to detect spikes and shifts linked to system changes, translating findings into actionable insights for 50+ stakeholders via Power BI and Tableau dashboards — while optimizing SQL query performance to cut analytical report latency by 83% (60 min to under 10 min).',
+      'Optimized SQL-based analytical workloads through indexing, partitioning, and caching, reducing query latency by 83% (60 min → under 10 min), enabling faster iteration on forecasting models.',
   },
   {
     title: 'Research Assistant',
