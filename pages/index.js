@@ -31,11 +31,12 @@ export default function Home({ posts }) {
               {`${siteMetadata.description}`}
             </h2>
             <p className="hidden pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300 md:block">
-              Data Scientist at the Agency for Persons with Disabilities, building forecasting
-              models, data pipelines, and analytics systems that inform decisions across a 60,000+
-              member population and $200M+ in monthly spend. Background in ML research, software
-              engineering, and quantitative finance — I like problems where rigorous modeling
-              connects to real decisions.
+              Data Scientist and engineer with a focus on quantitative finance, forecasting, and
+              production data systems. I've built ML pipelines processing 10,000+ financial filings
+              per day at S&P Global, developed ARIMA and VAR models over $200M+ in monthly
+              transaction volume, and shipped full-stack quant research platforms with backtesting
+              engines and live paper-trading. I like problems where rigorous modeling and solid
+              engineering connect to real financial decisions.
             </p>
             <p className="hidden pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300 md:block">
               <RoughNotation
