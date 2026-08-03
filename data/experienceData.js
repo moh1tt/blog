@@ -4,11 +4,11 @@ const experienceData = [
     company: 'APD',
     range: 'June 2025 – Present',
     text1:
-      'Build regression, ARIMA, and VAR forecasting models over $200M+ in monthly transaction volume, projecting service utilization and spend to inform annual budget submissions, provider rate decisions, and capacity planning for a 60,000+ member population.',
+      'Build ARIMA, VAR, and regression forecasting models over $200M+ in monthly transaction volume to inform budget submissions, provider rate decisions, and capacity planning across a 60,000+ member population.',
     text2:
-      'Architect 40+ automated ETL pipelines in Python, SQL Server, and Azure Data Warehouse processing 300K+ monthly records. Lead Power BI development end to end — defining metrics and semantic models behind executive dashboards tracking 60,000+ client applications and $180M in emergency financial assistance, replacing manual pulls with self-serve visibility for program directors.',
+      'Architect 40+ automated ETL pipelines (Python, SQL Server, Azure Data Warehouse) processing 300K+ monthly records, and lead Power BI development for executive dashboards tracking $180M in program spend — replacing manual reporting with self-serve analytics.',
     text3:
-      'Re-engineered the agency\'s heaviest SQL workloads through indexing, partitioning, stored procedures, and execution-plan tuning — 83% runtime reduction (60 min → under 10 min). Translate functional and non-functional requirements from business analysts, project managers, and external stakeholders into scoped analyses and dashboards, applying CI/CD practices to analytics deployment.',
+      'Optimized the agency\'s heaviest SQL workloads through indexing, partitioning, and stored procedures — 83% runtime reduction (60 min → under 10 min). Apply CI/CD practices to analytics deployment and translate stakeholder requirements into production-grade analytical systems.',
   },
   {
     title: 'Research Assistant',
@@ -26,11 +26,11 @@ const experienceData = [
     company: 'S&P Global',
     range: 'January 2022 – June 2023',
     text1:
-      'Built a production-grade data extraction platform processing 10,000+ documents/day, combining OCR and CNN-based classification models to convert unstructured PDFs and scanned documents into structured datasets for downstream analysis and modeling.',
+      'Built and shipped a production data platform processing 10,000+ financial filings and business documents per day — OCR and CNN-based classification converting unstructured and scanned filings into structured data feeding S&P Global\'s downstream research and analytics products.',
     text2:
-      'Engineered cloud-based data pipelines (AWS S3, Athena, BigQuery) to ingest, transform, and serve large-scale datasets, enabling analysts and downstream models to access up-to-date structured data within minutes.',
+      'Engineered cloud data pipelines on AWS (S3, Athena) and BigQuery for large-scale financial dataset ingestion and transformation, enabling near real-time availability for downstream consumers. Designed a modular Python extraction framework with CDC-based incremental updates and 80% test coverage, cutting onboarding cost for new document types across multiple business domains.',
     text3:
-      'Designed a modular, reusable Python extraction framework with CDC-based updates and 80% test coverage, and developed REST API integrations with schema validation and CI/CD (GitHub Actions) to improve data quality and deployment reliability.',
+      'Developed REST API integrations with schema validation and GitHub Actions CI/CD. Led a team of 5 engineers through the legacy .NET-to-Python migration, standardizing the extraction stack and training the team on the new tooling.',
   },
   {
     title: 'Software Developer Intern',
