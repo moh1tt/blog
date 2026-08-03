@@ -31,12 +31,11 @@ export default function Home({ posts }) {
               {`${siteMetadata.description}`}
             </h2>
             <p className="hidden pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300 md:block">
-              I research systematic trading strategies grounded in academic factor literature —
-              Jegadeesh-Titman momentum, Fama-French/Carhart factors, Hamilton regime-switching
-              models — validated through rigorous backtesting. Recent work includes a Gaussian
-              HMM-based market regime detector (Sharpe 0.769 vs. 0.641, drawdown -25.6% vs. -33.7%)
-              and a full-stack quant research platform with a multi-factor scoring model,
-              backtesting engine, regime filter, and live paper-trading across 500+ tickers.
+              Data Scientist at the Agency for Persons with Disabilities, building forecasting
+              models, data pipelines, and analytics systems that inform decisions across a 60,000+
+              member population and $200M+ in monthly spend. Background in ML research, software
+              engineering, and quantitative finance — I like problems where rigorous modeling
+              connects to real decisions.
             </p>
             <p className="hidden pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300 md:block">
               <RoughNotation
