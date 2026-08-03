@@ -4,11 +4,11 @@ const experienceData = [
     company: 'APD',
     range: 'June 2025 – Present',
     text1:
-      'Performed forecasting and budgeting analysis on ~$200M in monthly financial transactions, producing charts, supporting data, and reports used for rate-change decisions and financial planning. Conducted research and trend analysis across a 60,000+ client base (state waiver program), tracking client movement between services, service utilization patterns, and data integrity issues.',
+      'Build regression, ARIMA, and VAR forecasting models over $200M+ in monthly transaction volume, projecting service utilization and spend to inform annual budget submissions, provider rate decisions, and capacity planning for a 60,000+ member population.',
     text2:
-      'Built and maintained 40+ automated data pipelines processing 300K+ records (Python, SQL Server, Azure Data Warehouse, Docker), ensuring reliability for downstream forecasting and financial analysis.',
+      'Architect 40+ automated ETL pipelines in Python, SQL Server, and Azure Data Warehouse processing 300K+ monthly records. Lead Power BI development end to end — defining metrics and semantic models behind executive dashboards tracking 60,000+ client applications and $180M in emergency financial assistance, replacing manual pulls with self-serve visibility for program directors.',
     text3:
-      'Optimized SQL-based analytical workloads through indexing, partitioning, and caching, reducing query latency by 83% (60 min → under 10 min), enabling faster iteration on forecasting models.',
+      'Re-engineered the agency\'s heaviest SQL workloads through indexing, partitioning, stored procedures, and execution-plan tuning — 83% runtime reduction (60 min → under 10 min). Translate functional and non-functional requirements from business analysts, project managers, and external stakeholders into scoped analyses and dashboards, applying CI/CD practices to analytics deployment.',
   },
   {
     title: 'Research Assistant',
