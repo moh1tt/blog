@@ -9,7 +9,6 @@ import { motion } from 'framer-motion'
 import NewsletterForm from '@/components/NewsletterForm'
 import ViewCounter from '@/components/ViewCounter'
 import Reveal from '@/components/Reveal'
-import ProjectCover from '@/components/ProjectCover'
 
 const heroButtonPrimary =
   'inline-flex items-center gap-2 rounded-full bg-primary-500 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary-600 hover:shadow-lg hover:shadow-primary-500/30'
@@ -196,18 +195,13 @@ export default function Home({ posts }) {
               <Reveal key={slug} delay={i * 0.08} className="h-full">
                 <Link
                   href={`/blog/${slug}`}
-                  className="group flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary-500/40 hover:shadow-xl hover:shadow-primary-500/10 dark:border-gray-800 dark:bg-gray-900 dark:hover:border-primary-500/40"
+                  className="group flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary-500/40 hover:shadow-xl hover:shadow-primary-500/10 dark:border-gray-800 dark:bg-gray-900 dark:hover:border-primary-500/40"
                 >
-                  <div className="overflow-hidden">
-                    <div className="transition-transform duration-500 group-hover:scale-105">
-                      <ProjectCover title={title} index={i} />
-                    </div>
-                  </div>
-                  <article className="flex flex-1 flex-col p-5">
+                  <article className="flex h-full flex-col">
                     <time dateTime={date} className="text-sm text-gray-400 dark:text-gray-500">
                       {formatDate(date)}
                     </time>
-                    <h2 className="mt-2 text-lg font-bold leading-6 tracking-tight text-gray-900 dark:text-gray-100">
+                    <h2 className="mt-2 text-xl font-bold leading-7 tracking-tight text-gray-900 dark:text-gray-100">
                       {title}
                     </h2>
                     <div className="prose mt-2 max-w-none flex-1 text-sm leading-6 text-gray-500 dark:text-gray-400">

@@ -18,7 +18,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
 
   return (
     <>
-      <div className="mx-auto max-w-6xl divide-y divide-gray-200 dark:divide-gray-800">
+      <div className="mx-auto max-w-6xl">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             {title}
@@ -47,52 +47,37 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
             </svg>
           </div>
         </div>
-        <ul>
+        <div className="grid grid-cols-1 gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
           {!filteredBlogPosts.length && 'No posts found.'}
           {displayPosts.map((frontMatter, i) => {
             const { slug, date, title, summary, tags } = frontMatter
             return (
-              <Reveal key={slug} delay={Math.min(i, 6) * 0.05}>
+              <Reveal key={slug} delay={Math.min(i, 6) * 0.05} className="h-full">
                 <Link
                   href={`/blog/${slug}`}
-                  className="group flex bg-transparent bg-opacity-20 px-2 transition duration-100 hover:scale-105 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800"
+                  className="group flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary-500/40 hover:shadow-xl hover:shadow-primary-500/10 dark:border-gray-800 dark:bg-gray-900 dark:hover:border-primary-500/40"
                 >
-                  <li className="py-6">
-                    <article className="space-y-2 bg-transparent bg-opacity-20 p-2 transition duration-200 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-3">
-                      <dl>
-                        <dd className="text-sm font-normal leading-6 text-gray-500 dark:text-gray-400">
-                          <time dateTime={date}>{formatDate(date)}</time>
-                        </dd>
-                      </dl>
-                      <div className="space-y-5 xl:col-span-4">
-                        <div className="space-y-1">
-                          <div>
-                            <h2 className="text-2xl font-bold leading-8 tracking-tight">
-                              <Link
-                                href={`/blog/${slug}`}
-                                className="text-gray-900 transition duration-500 ease-in-out hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-500"
-                              >
-                                {title}
-                              </Link>
-                            </h2>
-                          </div>
-                          <div className="flex flex-wrap">
-                            {tags.map((tag) => (
-                              <Tag key={tag} text={tag} />
-                            ))}
-                          </div>
-                          <div className="prose max-w-none pt-5 text-gray-500 dark:text-gray-400">
-                            {summary}
-                          </div>
-                        </div>
-                      </div>
-                    </article>
-                  </li>
+                  <article className="flex h-full flex-col">
+                    <time dateTime={date} className="text-sm text-gray-400 dark:text-gray-500">
+                      {formatDate(date)}
+                    </time>
+                    <h2 className="mt-2 text-xl font-bold leading-7 tracking-tight text-gray-900 dark:text-gray-100">
+                      {title}
+                    </h2>
+                    <div className="prose mt-2 max-w-none flex-1 text-sm leading-6 text-gray-500 dark:text-gray-400">
+                      {summary}
+                    </div>
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {tags.slice(0, 4).map((tag) => (
+                        <Tag key={tag} text={tag} />
+                      ))}
+                    </div>
+                  </article>
                 </Link>
               </Reveal>
             )
           })}
-        </ul>
+        </div>
       </div>
       {pagination && pagination.totalPages > 1 && !searchValue && (
         <Pagination currentPage={pagination.currentPage} totalPages={pagination.totalPages} />
