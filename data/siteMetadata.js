@@ -2,7 +2,7 @@ const siteMetadata = {
   title: 'Blog | Mohit Appari',
   author: 'Mohit Appari',
   headerTitle: 'The Journey',
-  description: 'Data Scientist building forecasting models, pipelines, and analytics systems.',
+  description: 'Data Scientist building statistical models, data pipelines, and analytics systems.',
   snippets: 'Reuseable code snippets collected by Mohit',
   language: 'en-us',
   theme: 'system', // system, dark or light

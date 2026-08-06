@@ -31,12 +31,12 @@ export default function Home({ posts }) {
               {`${siteMetadata.description}`}
             </h2>
             <p className="hidden pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300 md:block">
-              Data Scientist and engineer with a focus on quantitative finance, forecasting, and
-              production data systems. I've built ML pipelines processing 10,000+ financial filings
-              per day at S&P Global, developed ARIMA and VAR models over $200M+ in monthly
-              transaction volume, and shipped full-stack quant research platforms with backtesting
-              engines and live paper-trading. I like problems where rigorous modeling and solid
-              engineering connect to real financial decisions.
+              Data Scientist applying statistical modeling, machine learning, and data engineering
+              to problems in finance and analytics. At APD State of Florida, I process 200K+ records
+              across Medicaid, vendor, and client systems serving 60,000+ individuals, and lead
+              Power BI reporting that cut execution time by 83%. Before that, I built ML pipelines
+              processing 10,000+ financial filings a day at S&P Global. I like problems where
+              rigorous modeling and solid engineering connect to real decisions.
             </p>
             <p className="hidden pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300 md:block">
               <RoughNotation
