@@ -1,8 +1,8 @@
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
-import siteMetadata from '@/data/siteMetadata'
 import { useState } from 'react'
 import Pagination from '@/components/Pagination'
+import Reveal from '@/components/Reveal'
 import formatDate from '@/lib/utils/formatDate'
 
 export default function SnippetsLayout({ posts, title, initialDisplayPosts = [], pagination }) {
@@ -18,7 +18,7 @@ export default function SnippetsLayout({ posts, title, initialDisplayPosts = [],
 
   return (
     <>
-      <div className="mx-auto max-w-6xl divide-y divide-gray-400">
+      <div className="mx-auto max-w-6xl divide-y divide-gray-200 dark:divide-gray-800">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             {title}
@@ -29,10 +29,10 @@ export default function SnippetsLayout({ posts, title, initialDisplayPosts = [],
               type="text"
               onChange={(e) => setSearchValue(e.target.value)}
               placeholder="Search snippets"
-              className="block w-full rounded-md border border-gray-400 bg-white px-4 py-2 text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100"
+              className="block w-full rounded-full border border-gray-300 bg-white px-5 py-2.5 text-gray-900 transition-colors duration-200 focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100"
             />
             <svg
-              className="absolute right-3 top-3 h-5 w-5 text-gray-400 dark:text-gray-300"
+              className="absolute right-4 top-3 h-5 w-5 text-gray-400 dark:text-gray-500"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -47,50 +47,44 @@ export default function SnippetsLayout({ posts, title, initialDisplayPosts = [],
             </svg>
           </div>
         </div>
-        <div className="grid grid-cols-1 gap-8 py-12 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
           {!filteredBlogPosts.length && 'No posts found.'}
-          {displayPosts.map((frontMatter) => {
+          {displayPosts.map((frontMatter, i) => {
             const { slug, date, title, summary, tags } = frontMatter
             return (
-              <Link
-                key={slug}
-                href={`/snippets/${slug}`}
-                className="bg-day·dark:bg-night·group group relative flex transform cursor-pointer flex-wrap border border-gray-200 bg-opacity-50 p-px py-px transition duration-200 hover:scale-105 dark:border-gray-700 dark:bg-opacity-50"
-              >
-                <div className="absolute bottom-0 left-0 h-0.5 w-full origin-left scale-x-0 transform bg-primary-500 duration-200 group-hover:scale-x-100" />
-                <div className="absolute bottom-0 left-0 h-full w-0.5 origin-bottom scale-y-0 transform bg-primary-500 duration-200 group-hover:scale-y-100" />
-                <div className="absolute top-0 left-0 h-0.5 w-full origin-right scale-x-0 transform bg-primary-500 duration-200 group-hover:scale-x-100" />
-                <div className="absolute bottom-0 right-0 h-full w-0.5 origin-top scale-y-0 transform bg-primary-500 duration-200 group-hover:scale-y-100" />
-                <div className="bg-day dark:bg-night relative space-y-2 rounded-2xl p-4">
-                  <article>
-                    <div>
-                      <h2 className="text-2xl font-bold leading-8 tracking-tight ">
-                        <Link
-                          href={`/snippets/${slug}`}
-                          className="text-gray-900 transition  duration-500 ease-in-out hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-500"
-                        >
-                          {title}
-                        </Link>
-                      </h2>
-                      <div className="prose prose-base max-w-none text-gray-500 dark:text-gray-400 sm:prose-lg">
-                        {summary}
-                      </div>
-
-                      <div className="flex flex-wrap pt-2">
-                        {tags.map((tag) => (
-                          <Tag key={tag} text={tag} />
-                        ))}
-                      </div>
+              <Reveal key={slug} delay={Math.min(i, 6) * 0.05} className="h-full">
+                <Link
+                  href={`/snippets/${slug}`}
+                  className="group flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary-500/40 hover:shadow-xl hover:shadow-primary-500/10 dark:border-gray-800 dark:bg-gray-900 dark:hover:border-primary-500/40"
+                >
+                  <article className="flex h-full flex-col">
+                    <time dateTime={date} className="text-sm text-gray-400 dark:text-gray-500">
+                      {formatDate(date)}
+                    </time>
+                    <h2 className="mt-2 text-xl font-bold leading-7 tracking-tight text-gray-900 dark:text-gray-100">
+                      {title}
+                    </h2>
+                    <div className="prose mt-2 max-w-none flex-1 text-sm leading-6 text-gray-500 dark:text-gray-400">
+                      {summary}
+                    </div>
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {tags.map((tag) => (
+                        <Tag key={tag} text={tag} />
+                      ))}
                     </div>
                   </article>
-                </div>
-              </Link>
+                </Link>
+              </Reveal>
             )
           })}
         </div>
       </div>
       {pagination && pagination.totalPages > 1 && !searchValue && (
-        <Pagination currentPage={pagination.currentPage} totalPages={pagination.totalPages} />
+        <Pagination
+          currentPage={pagination.currentPage}
+          totalPages={pagination.totalPages}
+          basePath="snippets"
+        />
       )}
     </>
   )

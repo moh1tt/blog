@@ -1,5 +1,7 @@
+import { motion } from 'framer-motion'
+import Image from './Image'
 import SocialIcon from './social-icons'
-import FolderIcon from './icon'
+import ProjectCover from './ProjectCover'
 
 const Card = ({
   title,
@@ -13,34 +15,62 @@ const Card = ({
   tech4,
   tech5,
   tech6,
-}) => (
-  <div className="md p-4 md:w-1/2" style={{ maxWidth: '544px' }}>
-    <div className="h-full transform overflow-hidden rounded-md border-2 border-solid border-gray-200 bg-transparent bg-opacity-20 transition duration-500 hover:scale-105 hover:rounded-md hover:border-primary-500 hover:bg-gray-300 dark:border-gray-700 dark:hover:border-primary-500 dark:hover:bg-gray-800">
-      <div className="p-6">
-        <div className="flex flex-row items-center justify-between">
-          <div className="my-2">
-            <FolderIcon />
-          </div>
-          <div className="flex flex-row justify-between">
-            <div className="mx-1.5">
-              {href ? <SocialIcon kind="external" href={href} size="6" /> : null}
-            </div>
-            <div className="mx-1.5">
-              {github ? <SocialIcon kind="github" href={github} size="6" /> : null}
-            </div>
+  index = 0,
+  featured = false,
+}) => {
+  const techs = [tech1, tech2, tech3, tech4, tech5, tech6].filter(Boolean)
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-80px' }}
+      transition={{ duration: 0.5, ease: 'easeOut' }}
+      className={`h-full ${featured ? 'lg:col-span-2' : ''}`}
+    >
+      <div className="group flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary-500/40 hover:shadow-xl hover:shadow-primary-500/10 dark:border-gray-800 dark:bg-gray-900 dark:hover:border-primary-500/40">
+        <div className="overflow-hidden">
+          <div className="transition-transform duration-500 group-hover:scale-105">
+            {imgSrc ? (
+              <Image
+                src={imgSrc}
+                alt={title}
+                width={800}
+                height={450}
+                className="aspect-[16/9] w-full object-cover"
+              />
+            ) : (
+              <ProjectCover title={title} index={index} />
+            )}
           </div>
         </div>
-        <h2 className="mb-3 text-2xl font-bold leading-8 tracking-tight">{title}</h2>
-
-        <p className="prose mb-3 max-w-none text-gray-500 dark:text-gray-400">{description}</p>
-        <div className="flex flex-row justify-between">
-          <div className="text-sm text-gray-400">
-            {tech1} &#8226; {tech2} &#8226; {tech3} &#8226; {tech4} &#8226; {tech5} &#8226; {tech6}
+        <div className="flex flex-1 flex-col p-6">
+          <div className="mb-3 flex items-start justify-between gap-3">
+            <h3 className="text-xl font-bold leading-7 tracking-tight text-gray-900 dark:text-gray-100">
+              {title}
+            </h3>
+            <div className="flex shrink-0 items-center gap-3 pt-1">
+              {href && <SocialIcon kind="external" href={href} size="5" />}
+              {github && <SocialIcon kind="github" href={github} size="5" />}
+            </div>
+          </div>
+          <p className="mb-5 flex-1 text-sm leading-6 text-gray-500 dark:text-gray-400">
+            {description}
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {techs.map((tech) => (
+              <span
+                key={tech}
+                className="rounded-full bg-primary-500/10 px-2.5 py-1 text-xs font-medium text-primary-600 dark:text-primary-400"
+              >
+                {tech}
+              </span>
+            ))}
           </div>
         </div>
       </div>
-    </div>
-  </div>
-)
+    </motion.div>
+  )
+}
 
 export default Card

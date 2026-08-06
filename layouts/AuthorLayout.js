@@ -223,18 +223,18 @@ export default function AuthorLayout({ children, frontMatter }) {
               Experience
             </h1>
           </div>
-          <div className="max-w-none pt-8 pb-8 xl:col-span-2">
-            {experienceData.map((d) => (
+          <div className="max-w-2xl pt-8 pb-8 xl:col-span-2">
+            {experienceData.map((d, i) => (
               <Experience
                 key={d.company}
                 title={d.title}
                 company={d.company}
-                location={d.location}
                 range={d.range}
                 url={d.url}
                 text1={d.text1}
                 text2={d.text2}
                 text3={d.text3}
+                isLast={i === experienceData.length - 1}
               />
             ))}
           </div>

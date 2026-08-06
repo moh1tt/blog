@@ -289,10 +289,6 @@ module.exports = {
             opacity: 0,
           },
         },
-        'ticker-scroll': {
-          '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-50%)' },
-        },
       },
       animation: {
         'fade-text': '10s ease-in-out 3s 1 normal forwards running fade-away',
@@ -305,8 +301,6 @@ module.exports = {
         'gradient-foreground-2': 'gradient-foreground-2 8s infinite',
         'gradient-background-3': 'gradient-background-3 8s infinite',
         'gradient-foreground-3': 'gradient-foreground-3 8s infinite',
-        ticker: 'ticker-scroll 100s linear infinite',
-        'ticker-slow': 'ticker-scroll 160s linear infinite',
       },
     },
   },
