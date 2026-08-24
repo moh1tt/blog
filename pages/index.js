@@ -4,19 +4,64 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import formatDate from '@/lib/utils/formatDate'
-import { motion } from 'framer-motion'
+import { RoughNotation } from 'react-rough-notation'
 import NewsletterForm from '@/components/NewsletterForm'
 import ViewCounter from '@/components/ViewCounter'
 import Reveal from '@/components/Reveal'
 
-const heroLink =
-  'inline-flex items-center gap-1.5 text-sm font-semibold text-primary-500 hover:text-primary-600 dark:text-primary-400 dark:hover:text-primary-300'
-
-const heroFacts = [
-  '3+ years in data science & engineering',
-  '200K+ records processed monthly at APD',
-  '83% faster reporting (60 min → <10 min)',
-  '10K+ docs/day pipeline built at S&P Global',
+const heroLinks = [
+  {
+    href: '/projects',
+    caption: 'What I built',
+    cta: 'Projects',
+    iconColor: 'text-green-600',
+    ctaColor: 'text-amber-400',
+    glow: 'from-pink-600 to-purple-600',
+    icon: (
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+      />
+    ),
+  },
+  {
+    href: 'https://medium.com/@moh1tt',
+    caption: 'Read my story',
+    cta: 'Writing',
+    iconColor: 'text-pink-600',
+    ctaColor: 'text-indigo-400',
+    glow: 'from-fuchsia-600 to-emerald-600',
+    icon: (
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+      />
+    ),
+  },
+  {
+    href: '/static/resume/Mohit_Appari.pdf',
+    caption: 'Hire me!',
+    cta: 'Résumé',
+    iconColor: 'text-fuchsia-600',
+    ctaColor: 'text-primary-400',
+    glow: 'from-pink-600 to-purple-600',
+    icon: (
+      <>
+        <path d="M12 14l9-5-9-5-9 5 9 5z" />
+        <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+        />
+      </>
+    ),
+  },
 ]
 
 const MAX_DISPLAY = 3
@@ -32,55 +77,87 @@ export default function Home({ posts }) {
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <div>
-        <div className="mb-16 max-w-2xl border-b border-gray-200 pt-6 pb-12 dark:border-gray-800">
-          <motion.h1
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, ease: 'easeOut' }}
-            className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl"
-          >
-            Mohit Appari
-          </motion.h1>
-          <p className="mt-2 text-lg text-gray-500 dark:text-gray-400">
-            {siteMetadata.description}
-          </p>
-          <p className="prose mt-6 max-w-none text-base leading-7 text-gray-600 dark:text-gray-300">
-            Data Scientist applying statistical modeling, machine learning, and data engineering to
-            problems in finance and analytics. At APD State of Florida, I process 200K+ records
-            across Medicaid, vendor, and client systems serving 60,000+ individuals, and lead Power
-            BI reporting that cut execution time by 83%. Before that, I built ML pipelines
-            processing 10,000+ financial filings a day at S&P Global. I like problems where rigorous
-            modeling and solid engineering connect to real decisions.
-          </p>
-          <ul className="mt-5 space-y-1 text-sm text-gray-500 dark:text-gray-400">
-            {heroFacts.map((fact) => (
-              <li key={fact} className="flex items-baseline gap-2">
-                <span className="text-primary-500">·</span>
-                {fact}
-              </li>
-            ))}
-          </ul>
-          <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2">
-            <Link href="/projects" className={heroLink}>
-              Projects <span aria-hidden="true">&rarr;</span>
-            </Link>
-            <Link href="https://medium.com/@moh1tt" className={heroLink}>
-              Writing <span aria-hidden="true">&rarr;</span>
-            </Link>
-            <Link href="/static/resume/Mohit_Appari.pdf" className={heroLink}>
-              Résumé <span aria-hidden="true">&rarr;</span>
-            </Link>
-            <span className="text-sm text-gray-400 dark:text-gray-500">
-              Press{' '}
-              <kbd className="rounded border border-gray-300 px-1.5 py-0.5 font-mono text-xs dark:border-gray-700">
-                ⌘K
-              </kbd>{' '}
-              to search
-            </span>
+        <div className="mb-12 flex flex-col items-center gap-x-12 xl:flex-row xl:items-start">
+          <div className="pt-6">
+            <h1 className="pb-6 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+              Mohit{' '}
+              <span className="text-primary-color-500 dark:text-primary-color-dark-500">
+                Appari
+              </span>
+            </h1>
+            <h2 className="prose pt-5 text-lg text-gray-600 dark:text-gray-300">
+              I like training deep neural nets on large datasets 🧠🤖💥 — usually pointed at
+              markets.
+            </h2>
+            <p className="pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300">
+              This is where I write about the things I can't stop thinking about — large language
+              models, neural nets, and the messier edges of deep learning; quantitative finance and
+              market analysis; economics, math, statistics, probability, and time series.
+            </p>
+            <p className="pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300">
+              <RoughNotation
+                animate="true"
+                type="highlight"
+                show={true}
+                color="#DE1D8D"
+                animationDelay={1000}
+                animationDuration={2500}
+                className="text-slate-200"
+                strokeWidth={1}
+              >
+                Mostly through projects: how to get started, what breaks when you actually build
+                something, and how to dig deeper once the basics click.
+              </RoughNotation>
+              <div className="mt-8 text-slate-600 dark:text-slate-400">
+                <span className="text-sm">Press</span>{' '}
+                <span className="rounded-md bg-gray-300 p-1 text-sm text-gray-900 dark:bg-gray-400">
+                  ⌘
+                </span>{' '}
+                <span className="text-sm">+ </span>
+                <span className="rounded-md bg-gray-300 p-1 text-sm text-gray-900 dark:bg-gray-400">
+                  K
+                </span>{' '}
+                <span className="text-sm">to start</span>
+              </div>
+            </p>
+          </div>
+          <div className="flex items-center justify-center">
+            <div className="grid grid-cols-1 grid-rows-3 gap-8 py-12">
+              {heroLinks.map(({ href, caption, cta, iconColor, ctaColor, glow, icon }) => (
+                <div key={cta} className="my-2 grid items-start gap-8">
+                  <div className="group relative">
+                    <div
+                      className={`absolute -inset-0.5 rounded-lg bg-gradient-to-r ${glow} opacity-50 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200`}
+                    ></div>
+                    <Link href={href}>
+                      <span className="relative flex items-center divide-x divide-gray-600 rounded-lg bg-white px-7 py-4 leading-none dark:bg-black">
+                        <span className="flex items-center space-x-5">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className={`h-6 w-6 -rotate-6 ${iconColor}`}
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            {icon}
+                          </svg>
+                          <span className="pr-6 text-gray-900 dark:text-gray-100">{caption}</span>
+                        </span>
+                        <span
+                          className={`pl-6 ${ctaColor} transition duration-200 group-hover:text-gray-900 dark:group-hover:text-gray-100`}
+                        >
+                          {cta}&nbsp;&rarr;
+                        </span>
+                      </span>
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
         <Reveal>
-          <h2 className="flex pb-6 text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl">
+          <h2 className="flex pb-6 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl md:text-5xl">
             Latest
           </h2>
         </Reveal>
