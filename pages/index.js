@@ -85,13 +85,14 @@ export default function Home({ posts }) {
               </span>
             </h1>
             <h2 className="pt-5 text-lg text-gray-600 dark:text-gray-300">
-              Welcome to my corner of the internet, where I dig into deep learning, quantitative
-              finance, and the data behind markets.
+              Welcome to my corner of the internet, where I dig deep into neural networks, the math
+              and architecture behind them, quantitative methods, LLMs and AI agents, MCP servers,
+              forecasting, and building production grade infrastructure.
             </h2>
             <p className="pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300">
-              I love working with deep neural networks and machine learning algorithms, especially
-              when they're pointed at large financial datasets. Some of my favorite areas to dig
-              into are time series analysis and forecasting.
+              I currently work as a Data Scientist with over 3 years of experience building large
+              scale infrastructure and doing research at the core of finance and data, and I hold a
+              Master's in Data Science from Florida State University.
             </p>
             <p className="pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300">
               <RoughNotation
@@ -103,9 +104,16 @@ export default function Home({ posts }) {
                 animationDuration={2500}
                 strokeWidth={1}
               >
-                This site is a collection of my thoughts, blogs, projects, and everything else I'm
-                into — the things I explore, build, and can't stop chasing.
+                This site is a collection of my thoughts, projects, resources, and everything I'm
+                currently working on, the things I build and can't stop chasing.
               </RoughNotation>
+              <div className="mt-8 text-slate-600 dark:text-slate-400">
+                Thank you for stopping by, feel free to{' '}
+                <Link href="/contact" className="text-primary-500 hover:text-primary-600">
+                  reach out
+                </Link>
+                , happy reading!
+              </div>
               <div className="mt-8 text-slate-600 dark:text-slate-400">
                 <span className="text-sm">Press</span>{' '}
                 <span className="rounded-md bg-gray-300 p-1 text-sm text-gray-900 dark:bg-gray-400">
