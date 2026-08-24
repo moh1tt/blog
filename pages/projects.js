@@ -18,8 +18,8 @@ export default function Projects() {
               Projects
             </h1>
             <p className="text-md max-w-2xl leading-7 text-gray-500 dark:text-gray-400">
-              A selection of things I've built and researched — spanning quantitative finance,
-              causal inference, and data engineering.
+              A selection of things I've built and researched — spanning neural networks, deep
+              learning, statistics, finance, and math.
             </p>
           </div>
         </Reveal>

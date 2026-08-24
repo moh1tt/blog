@@ -70,7 +70,7 @@ export default function AuthorLayout({ frontMatter }) {
               </RoughNotation>
             </p>
             <p>
-              I'm eager to contribute to data science initiatives that bridge{' '}
+              I'm eager to contribute to AI engineering initiatives that bridge{' '}
               <RoughNotation
                 type="highlight"
                 show={true}
@@ -79,9 +79,9 @@ export default function AuthorLayout({ frontMatter }) {
                 animationDelay={1000}
                 animationDuration={3000}
               >
-                <span className="text-black dark:text-white">technical insights</span>
+                <span className="text-black dark:text-white">deep learning research</span>
               </RoughNotation>{' '}
-              with strategic impact.
+              with real-world impact.
             </p>
             <p>{text2}</p>
             <p>
