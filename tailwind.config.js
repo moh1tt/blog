@@ -26,6 +26,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        serif: ['Georgia', 'Cambria', ...defaultTheme.fontFamily.serif],
       },
       gradientColorStops: {
         // https://coolors.co/2d00f7-6a00f4-8900f2-a100f2-b100e8-bc00dd-d100d1-db00b6-e500a4-f20089
@@ -77,6 +78,8 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
+            fontFamily: theme('fontFamily.serif').join(', '),
+            lineHeight: '1.8',
             color: theme('colors.gray.700'),
             a: {
               color: theme('colors.primary.500'),
@@ -145,6 +148,8 @@ module.exports = {
         },
         dark: {
           css: {
+            fontFamily: theme('fontFamily.serif').join(', '),
+            lineHeight: '1.8',
             color: theme('colors.gray.300'),
             a: {
               color: theme('colors.primary.500'),
