@@ -76,22 +76,21 @@ export default function Home({ posts }) {
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <div>
-        <div className="mb-12 flex flex-col items-center gap-x-12 xl:flex-row xl:items-start">
-          <div className="pt-6">
+        <div className="mb-12 flex flex-col items-center gap-x-12 xl:flex-row xl:items-start xl:justify-between">
+          <div className="max-w-2xl pt-6">
             <h1 className="pb-6 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
               Mohit{' '}
               <span className="text-primary-color-500 dark:text-primary-color-dark-500">
                 Appari
               </span>
             </h1>
-            <h2 className="prose pt-5 text-lg text-gray-600 dark:text-gray-300">
-              I like training deep neural nets on large datasets 🧠🤖💥 — usually pointed at
-              markets.
+            <h2 className="pt-2 text-lg font-medium text-gray-500 dark:text-gray-400">
+              Data Scientist &amp; Software Engineer
             </h2>
             <p className="pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300">
-              This is where I write about the things I can't stop thinking about — large language
-              models, neural nets, and the messier edges of deep learning; quantitative finance and
-              market analysis; economics, math, statistics, probability, and time series.
+              I love working with deep neural networks and machine learning algorithms, especially
+              when they're pointed at large financial datasets. Some of my favorite areas to dig
+              into are time series analysis and forecasting.
             </p>
             <p className="pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300">
               <RoughNotation
@@ -104,8 +103,8 @@ export default function Home({ posts }) {
                 className="text-slate-200"
                 strokeWidth={1}
               >
-                Mostly through projects: how to get started, what breaks when you actually build
-                something, and how to dig deeper once the basics click.
+                This site is a collection of my thoughts, blogs, projects, and everything else I'm
+                into — the things I explore, build, and can't stop chasing.
               </RoughNotation>
               <div className="mt-8 text-slate-600 dark:text-slate-400">
                 <span className="text-sm">Press</span>{' '}

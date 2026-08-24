@@ -1,6 +1,5 @@
 import Link from '@/components/Link'
 import PageTitle from '@/components/PageTitle'
-import SectionContainer from '@/components/SectionContainer'
 import { BlogSEO } from '@/components/SEO'
 import Image from '@/components/Image'
 import ViewCounter from '@/components/ViewCounter'
@@ -28,7 +27,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
   const { slug, fileName, date, title, images, tags, readingTime } = frontMatter
   const postUrl = `${siteMetadata.siteUrl}/blog/${slug}`
   return (
-    <SectionContainer>
+    <>
       <BlogSEO
         url={`${siteMetadata.siteUrl}/blog/${slug}`}
         authorDetails={authorDetails}
@@ -272,6 +271,6 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
           </div>
         </div>
       </article>
-    </SectionContainer>
+    </>
   )
 }
