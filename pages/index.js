@@ -7,7 +7,6 @@ import formatDate from '@/lib/utils/formatDate'
 import { RoughNotation } from 'react-rough-notation'
 import NewsletterForm from '@/components/NewsletterForm'
 import ViewCounter from '@/components/ViewCounter'
-import Reveal from '@/components/Reveal'
 
 const heroLinks = [
   {
@@ -156,43 +155,58 @@ export default function Home({ posts }) {
             </div>
           </div>
         </div>
-        <Reveal>
-          <h2 className="flex pb-6 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl md:text-5xl">
-            Latest
-          </h2>
-        </Reveal>
+        <h2 className="flex pb-6 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl md:text-5xl">
+          Latest
+        </h2>
         <hr className="border-gray-200 dark:border-gray-700" />
-        <div className="grid grid-cols-1 gap-6 py-12 md:grid-cols-3">
+        <ul>
           {!posts.length && 'No posts found.'}
-          {posts.slice(0, MAX_DISPLAY).map((frontMatter, i) => {
+          {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
             const { slug, date, title, summary, tags } = frontMatter
             return (
-              <Reveal key={slug} delay={i * 0.08} className="h-full">
-                <Link
-                  href={`/blog/${slug}`}
-                  className="group flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary-500/40 hover:shadow-xl hover:shadow-primary-500/10 dark:border-gray-800 dark:bg-gray-900 dark:hover:border-primary-500/40"
-                >
-                  <article className="flex h-full flex-col">
-                    <time dateTime={date} className="text-sm text-gray-400 dark:text-gray-500">
-                      {formatDate(date)}
-                    </time>
-                    <h2 className="mt-2 text-xl font-bold leading-7 tracking-tight text-gray-900 dark:text-gray-100">
-                      {title}
-                    </h2>
-                    <div className="prose mt-2 max-w-none flex-1 text-sm leading-6 text-gray-500 dark:text-gray-400">
-                      {summary}
-                    </div>
-                    <div className="mt-4 flex flex-wrap gap-2">
-                      {tags.slice(0, 4).map((tag) => (
-                        <Tag key={tag} text={tag} />
-                      ))}
+              <Link
+                href={`/blog/${slug}`}
+                key={slug}
+                className="group flex bg-transparent bg-opacity-20 px-2 transition duration-100 hover:scale-105 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800"
+              >
+                <li className="py-6">
+                  <article>
+                    <div className="space-y-2 bg-transparent bg-opacity-20 p-2 transition duration-200 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
+                      <dl>
+                        <dt className="sr-only">Published on</dt>
+                        <dd className="text-sm font-normal leading-6 text-gray-500 dark:text-gray-400">
+                          <time dateTime={date}>{formatDate(date)}</time>
+                        </dd>
+                      </dl>
+                      <div className="space-y-5 xl:col-span-4">
+                        <div className="space-y-1">
+                          <div>
+                            <h2 className="text-2xl font-bold leading-8 tracking-tight">
+                              <Link
+                                href={`/blog/${slug}`}
+                                className="text-gray-900 transition duration-500 ease-in-out hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-500"
+                              >
+                                {title}
+                              </Link>
+                            </h2>
+                          </div>
+                          <div className="flex flex-wrap">
+                            {tags.map((tag) => (
+                              <Tag key={tag} text={tag} />
+                            ))}
+                          </div>
+                          <div className="prose max-w-none pt-5 text-gray-500 dark:text-gray-400">
+                            {summary}
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </article>
-                </Link>
-              </Reveal>
+                </li>
+              </Link>
             )
           })}
-        </div>
+        </ul>
       </div>
       {posts.length > MAX_DISPLAY && (
         <div className="flex justify-end pt-5 text-lg font-normal leading-6">
