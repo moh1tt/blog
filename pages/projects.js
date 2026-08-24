@@ -16,21 +16,21 @@ export default function Projects() {
       <div className="mx-auto max-w-6xl">
         <Reveal>
           <div className="space-y-2 pt-6 pb-10 md:space-y-5">
-            <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+            <h1 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl">
               Projects
             </h1>
-            <p className="text-md leading-7 text-gray-500 dark:text-gray-400">
-              A list of projects that I have been working on or built but not limited to.
+            <p className="text-md max-w-2xl leading-7 text-gray-500 dark:text-gray-400">
+              A selection of things I've built and researched — spanning quantitative finance,
+              causal inference, and data engineering.
             </p>
           </div>
         </Reveal>
-        <div className="grid grid-cols-1 gap-6 pb-12 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-5 pb-12 md:grid-cols-2 lg:grid-cols-3">
           {projectsData.map((d, i) => (
             <Card
               key={d.title}
               title={d.title}
               description={d.description}
-              imgSrc={d.imgSrc}
               href={d.href}
               github={d.github}
               tech1={d.tech1}
@@ -39,7 +39,6 @@ export default function Projects() {
               tech4={d.tech4}
               tech5={d.tech5}
               tech6={d.tech6}
-              index={i}
               featured={i < FEATURED_COUNT}
             />
           ))}

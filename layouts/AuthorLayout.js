@@ -3,7 +3,6 @@ import { PageSEO } from '@/components/SEO'
 import Link from '@/components/Link'
 import Experience from '@/components/Experience'
 import experienceData from '@/data/experienceData'
-import { RoughNotation } from 'react-rough-notation'
 import { AiOutlineTwitter } from 'react-icons/ai'
 
 export default function AuthorLayout({ children, frontMatter }) {
@@ -26,7 +25,7 @@ export default function AuthorLayout({ children, frontMatter }) {
       <PageSEO title={`About - ${name}`} description={`A little trivia me`} />
       <div className="">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5 md:pl-16">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+          <h1 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl">
             About
           </h1>
         </div>
@@ -59,45 +58,13 @@ export default function AuthorLayout({ children, frontMatter }) {
           </div>
           <div className="prose max-w-none pt-8 pb-8 dark:prose-dark xl:col-span-2">
             <p>
-              <RoughNotation
-                type="bracket"
-                brackets={['left', 'right']}
-                show={true}
-                color="#FF0000"
-                animationDelay={300}
-                animationDuration={3000}
-              >
-                {text1} Looking for exciting opportunities to work and collaborate with bright minds
-                and explore the world of data together.
-              </RoughNotation>
+              {text1} Looking for exciting opportunities to work and collaborate with bright minds
+              and explore the world of data together.
             </p>
 
             <p className="hidden md:block">
-              Outside of work,
-              <RoughNotation
-                animationDelay="1000"
-                animationDuration="3000"
-                type="highlight"
-                color="#DE1D8D"
-                strokeWidth="1.5"
-                show={true}
-              >
-                <span className="text-black dark:text-white">
-                  {' '}
-                  I enjoy exploring cafés, gaming, photography, and going on nature walks.{' '}
-                </span>
-              </RoughNotation>
-              {/* <RoughNotation
-                type="underline"
-                show={true}
-                color="#FBCFE8"
-                animationDelay={1500}
-                animationDuration={3000}
-                multiline={true}
-              >
-                actively on the lookout for remote internships which I can pursue in field of Data
-                Science
-              </RoughNotation> */}
+              Outside of work, I enjoy exploring cafés, gaming, photography, and going on nature
+              walks.
             </p>
 
             <p>
@@ -219,7 +186,7 @@ export default function AuthorLayout({ children, frontMatter }) {
         </div>
         <div className="mt-10 md:pl-16">
           <div className="space-y-2 pt-6 pb-8 md:space-y-5">
-            <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+            <h1 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl">
               Experience
             </h1>
           </div>

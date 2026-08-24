@@ -2,7 +2,6 @@ const projectsData = [
   {
     title: 'Seeking Alpha',
     description: `Full-stack quantitative research platform combining a multi-factor equity scoring model (momentum, technical, fundamental, PEAD/event factors, cross-sectionally normalized) with a backtesting engine, regime filter, and live paper-trading execution across 500+ tickers via Alpaca API.`,
-    imgSrc: '',
     href: 'https://medium.com/@moh1tt/i-built-a-quantitative-stock-research-platform-from-scratch-heres-everything-i-learned-b429b64caaad',
     github: 'https://github.com/moh1tt/seeking-alpha',
     tech1: 'Python',
@@ -15,7 +14,6 @@ const projectsData = [
   {
     title: 'RegimeSense',
     description: `Adaptive regime-switching trading system that classifies market conditions into 4 states (bull, choppy, high-vol trend, crisis) using a Gaussian Hidden Markov Model trained on 5,032 trading days. Dynamically allocates across a momentum/mean-reversion/trend/defensive strategy pool via HMM posterior probabilities — achieving OOS Sharpe 0.769 vs 0.641 for pure momentum with max drawdown reduced from -33.7% to -25.6%. Live paper trading on Alpaca with automated weekly rebalancing.`,
-    imgSrc: '',
     href: 'https://moh1tt.xyz/blog/regimesense',
     github: 'https://github.com/moh1tt/RegimeSense',
     tech1: 'Python',
@@ -28,7 +26,6 @@ const projectsData = [
   {
     title: 'Probabilistic Demand Forecasting Engine',
     description: `Global DeepAR model jointly trained across a 2,001-series stratified subset of the M5/Walmart retail dataset, producing P10/P50/P90 quantile forecasts (WQL/pinball loss) and evaluated against seasonal-naive, ETS, and Prophet baselines on a rolling-origin backtest. A leakage-tested cold-start holdout — verified by a test that walks the actual training dataloader and asserts no batch can see pre-cutoff data — shows cold-start series performing on par with warm-start (WQL 0.460 vs 0.466). Forecasts feed a business simulation where a P90 order-up-to inventory policy cuts the stockout rate from 23.9% to 1.9% at ~6x the holding cost of a P50 policy.`,
-    imgSrc: '',
     href: 'https://github.com/moh1tt/probabilistic-demand-forecasting',
     github: 'https://github.com/moh1tt/probabilistic-demand-forecasting',
     tech1: 'Python',
@@ -41,7 +38,6 @@ const projectsData = [
   {
     title: 'Marketplace Causal Inference & Experimentation Platform',
     description: `Configurable two-sided marketplace simulator with a known ground-truth causal effect, built to quantify exactly how naive A/B testing breaks under spatial interference — bias grows from statistically indistinguishable-from-zero at no spillover to -36.6% at high spillover. Validates switchback and buffered cluster-randomized designs that stay within ~5% bias regardless of spillover strength, applies diff-in-diff (cutting a +1,471% naive-comparison bias to -8.5%) and synthetic control to a non-random rollout, and closes the loop by benchmarking offline IPW policy evaluation against true online experiment results across multiple logging-data seeds.`,
-    imgSrc: '',
     href: 'https://github.com/moh1tt/causal-marketplace-experimentation',
     github: 'https://github.com/moh1tt/causal-marketplace-experimentation',
     tech1: 'Python',
@@ -54,7 +50,6 @@ const projectsData = [
   {
     title: 'BayWheels Lyft Trip Analytics',
     description: `Complete data pipeline processing 400K+ monthly BayWheels bike-share ride records using Python, Prefect, Docker, and GCP. Terraform provisions cloud infrastructure, dbt handles data modeling, and BigQuery powers analysis and storage; Kafka and Spark handle batch and real-time data to track ridership trends, station usage, and trip patterns. Cut manual work by 90% and made reports 60% faster.`,
-    imgSrc: '',
     href: 'https://medium.com/@mohitt.appari/from-data-to-insights-building-a-data-engineering-pipeline-analyzing-baywheels-bike-data-ae42fa61a23b',
     github: 'https://github.com/moh1tt/baywheels',
     tech1: 'Python',
@@ -67,7 +62,6 @@ const projectsData = [
   {
     title: 'Reddit Stock Sentiment Analyzer',
     description: `Full-stack web app that analyzes sentiment around user-searched stock tickers on Reddit using NLP. Displays sentiment breakdown, top posts, and current market data with a dark finance-themed UI.`,
-    imgSrc: '',
     href: 'https://github.com/moh1tt/reddit-stock-sentiment',
     github: 'https://github.com/moh1tt/reddit-stock-sentiment',
     tech1: 'Flask',
@@ -80,7 +74,6 @@ const projectsData = [
   {
     title: 'Market Insights',
     description: `Full stack web application that provides insights on the latest business, local and custom news with weather updates. Built with Flask, Next.js, Tailwindcss, and PostgreSQL.`,
-    imgSrc: '',
     href: 'https://github.com/moh1tt/market-insights',
     github: 'https://github.com/moh1tt/market-insights',
     tech1: 'Flask',
@@ -93,7 +86,6 @@ const projectsData = [
   {
     title: 'NY Taxi Data Engineering Pipeline',
     description: `A data engineering pipeline that processes and analyzes New York City taxi data. Built with modern data engineering tools to streamline the process of data ingestion, processing, and analysis.`,
-    imgSrc: '',
     href: 'https://github.com/moh1tt/de-zoomcamp',
     github: 'https://github.com/moh1tt/de-zoomcamp',
     tech1: 'Docker',
@@ -106,7 +98,6 @@ const projectsData = [
   {
     title: 'Monte-Scholes Option Pricer',
     description: `Interactive Streamlit app that compares European option pricing using Monte Carlo simulation and the Black-Scholes formula. Includes GBM-based path simulation, real-time pricing, sensitivity charts, and mathematical documentation.`,
-    imgSrc: '',
     href: 'https://github.com/moh1tt/monte-scholes',
     github: 'https://github.com/moh1tt/monte-scholes',
     tech1: 'Streamlit',
@@ -119,7 +110,6 @@ const projectsData = [
   {
     title: 'Factor-Based Stock Screener',
     description: `A dynamic financial web app that filters and ranks S&P 500 stocks based on key factors like valuation, profitability, growth, and risk. Includes real-time scoring, data visualizations, and a savings-based investment allocator.`,
-    imgSrc: '',
     href: 'https://github.com/moh1tt/factor-based-stock-screener',
     github: 'https://github.com/moh1tt/factor-based-stock-screener',
     tech1: 'Streamlit',
@@ -133,7 +123,6 @@ const projectsData = [
   {
     title: 'STA5635 RAG App',
     description: `High-performance RAG application built with LangChain, OpenAI, Cohere, Pinecone, Flask, and FastAPI, enabling contextual Q&A over academic PDFs for FSU's Applied Machine Learning course. Reduced research lookup time by 70% through real-time document retrieval and LLM-powered summarization.`,
-    imgSrc: '',
     href: 'https://huggingface.co/spaces/moh1tt/STA5635-Helper-App',
     github: 'https://github.com/moh1tt/langchain-qa-sta5635',
     tech1: 'LangChain',

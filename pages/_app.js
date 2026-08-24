@@ -10,9 +10,7 @@ import NProgress from 'nprogress'
 import siteMetadata from '@/data/siteMetadata'
 import Analytics from '@/components/analytics'
 import LayoutWrapper from '@/components/LayoutWrapper'
-import BackgroundChart from '@/components/BackgroundChart'
 import { ClientReload } from '@/components/ClientReload'
-import ProgressBar from 'react-scroll-progress-bar'
 import ScrollTop from '@/components/ScrollTop'
 import { SessionProvider } from 'next-auth/react'
 import { Provider } from '@lyket/react'
@@ -56,9 +54,7 @@ export default function App({ Component, pageProps: { session, ...pageProps } })
     <SessionProvider session={session}>
       <Provider apiKey="pt_7c8b6840f5ba39cd3b2b471cd8efc2" theme={defaultTheme}>
         <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
-          <ProgressBar bgcolor="#DE1D8D" />
           <ScrollTop />
-          <BackgroundChart />
           <Head>
             <meta content="width=device-width, initial-scale=1" name="viewport" />
           </Head>
