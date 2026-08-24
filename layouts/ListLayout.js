@@ -56,8 +56,8 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                 key={slug}
                 className="group flex bg-transparent bg-opacity-20 px-2 transition duration-100 hover:scale-105 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800"
               >
-                <li className="py-6">
-                  <article className="space-y-2 bg-transparent bg-opacity-20 p-2 transition duration-200 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-3">
+                <li className="py-3">
+                  <article className="space-y-2 bg-transparent bg-opacity-20 p-2 transition duration-200 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-2">
                     <dl>
                       <dt className="sr-only">Published on</dt>
                       <dd className="text-sm font-normal leading-6 text-gray-500 dark:text-gray-400">
@@ -68,7 +68,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                         )}
                       </dd>
                     </dl>
-                    <div className="space-y-5 xl:col-span-4">
+                    <div className="space-y-2 xl:col-span-4">
                       <div className="space-y-1">
                         <div>
                           <h2 className="font-mono text-2xl font-semibold leading-8 tracking-tight">
@@ -85,7 +85,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                             <Tag key={tag} text={tag} />
                           ))}
                         </div>
-                        <div className="prose max-w-none pt-5 text-gray-500 dark:text-gray-400">
+                        <div className="prose max-w-none pt-2 leading-6 text-gray-500 dark:text-gray-400">
                           {summary}
                         </div>
                       </div>
