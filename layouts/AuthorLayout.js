@@ -6,6 +6,7 @@ import Experience from '@/components/Experience'
 import experienceData from '@/data/experienceData'
 import Education from '@/components/Education'
 import educationData from '@/data/educationData'
+import { RoughNotation } from 'react-rough-notation'
 
 const ExternalLinkIcon = () => (
   <svg
@@ -56,7 +57,32 @@ export default function AuthorLayout({ frontMatter }) {
             </div>
           </div>
           <div className="prose max-w-none pt-8 pb-8 dark:prose-dark xl:col-span-2">
-            <p>{text1}</p>
+            <p>
+              <RoughNotation
+                type="bracket"
+                brackets={['left', 'right']}
+                show={true}
+                color="#FF0000"
+                animationDelay={300}
+                animationDuration={3000}
+              >
+                {text1}
+              </RoughNotation>
+            </p>
+            <p>
+              I'm eager to contribute to data science initiatives that bridge{' '}
+              <RoughNotation
+                type="highlight"
+                show={true}
+                color="#0ea4e9"
+                strokeWidth={3}
+                animationDelay={1000}
+                animationDuration={3000}
+              >
+                <span className="text-black dark:text-white">technical insights</span>
+              </RoughNotation>{' '}
+              with strategic impact.
+            </p>
             <p>{text2}</p>
             <p>
               Check out some of my photography work on{' '}
