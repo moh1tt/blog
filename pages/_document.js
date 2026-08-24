@@ -120,7 +120,7 @@ class MyDocument extends Document {
             content="_Ba0lKk4Dl9XMvABJ9gZEtoMPITT5Vr5TGx2M-34Z_I"
           />
         </Head>
-        <body className="dark:bg-[radial-gradient(ellipse_80%_50%_at_50%_-10%,rgba(222,29,141,0.14),transparent_60%),radial-gradient(ellipse_60%_40%_at_100%_100%,rgba(222,29,141,0.09),transparent_60%)] bg-white bg-no-repeat text-black antialiased dark:bg-black dark:bg-fixed dark:text-white">
+        <body className="dark:bg-[radial-gradient(ellipse_90%_60%_at_50%_-10%,rgba(222,29,141,0.20),transparent_65%),radial-gradient(ellipse_70%_50%_at_100%_100%,rgba(222,29,141,0.13),transparent_65%)] bg-white bg-no-repeat text-black antialiased dark:bg-[#130a0f] dark:bg-fixed dark:text-white">
           <Main />
           <NextScript />
         </body>
