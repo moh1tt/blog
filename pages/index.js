@@ -87,18 +87,12 @@ export default function Home({ posts }) {
             <h2 className="pt-2 text-lg font-medium text-gray-500 dark:text-gray-400">
               Data Scientist &amp; Software Engineer
             </h2>
-            <p
-              className="pt-5 text-base leading-8 text-gray-500 dark:text-gray-400"
-              style={{ fontFamily: '"Times New Roman", Times, serif' }}
-            >
+            <p className="pt-5 font-serif text-base leading-[1.8] text-gray-500 dark:text-gray-400">
               I love working with deep neural networks and machine learning algorithms, especially
               when they're pointed at large financial datasets. Some of my favorite areas to dig
               into are time series analysis and forecasting.
             </p>
-            <p
-              className="pt-5 text-base leading-8 text-gray-500 dark:text-gray-400"
-              style={{ fontFamily: '"Times New Roman", Times, serif' }}
-            >
+            <p className="pt-5 font-serif text-base leading-[1.8] text-gray-500 dark:text-gray-400">
               <RoughNotation
                 animate="true"
                 type="highlight"
