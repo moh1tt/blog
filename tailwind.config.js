@@ -27,6 +27,7 @@ module.exports = {
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
         serif: ['Georgia', 'Cambria', ...defaultTheme.fontFamily.serif],
+        mono: ['JetBrains Mono', ...defaultTheme.fontFamily.mono],
       },
       gradientColorStops: {
         // https://coolors.co/2d00f7-6a00f4-8900f2-a100f2-b100e8-bc00dd-d100d1-db00b6-e500a4-f20089
@@ -89,20 +90,24 @@ module.exports = {
               code: { color: theme('colors.primary.400') },
             },
             h1: {
-              fontWeight: '700',
+              fontFamily: theme('fontFamily.mono').join(', '),
+              fontWeight: '600',
               letterSpacing: theme('letterSpacing.tight'),
               color: theme('colors.gray.900'),
             },
             h2: {
-              fontWeight: '700',
+              fontFamily: theme('fontFamily.mono').join(', '),
+              fontWeight: '600',
               letterSpacing: theme('letterSpacing.tight'),
               color: theme('colors.gray.900'),
             },
             h3: {
+              fontFamily: theme('fontFamily.mono').join(', '),
               fontWeight: '600',
               color: theme('colors.gray.900'),
             },
             'h4,h5,h6': {
+              fontFamily: theme('fontFamily.mono').join(', '),
               color: theme('colors.gray.900'),
             },
             pre: {
@@ -159,20 +164,24 @@ module.exports = {
               code: { color: theme('colors.primary.400') },
             },
             h1: {
-              fontWeight: '700',
+              fontFamily: theme('fontFamily.mono').join(', '),
+              fontWeight: '600',
               letterSpacing: theme('letterSpacing.tight'),
               color: theme('colors.gray.100'),
             },
             h2: {
-              fontWeight: '700',
+              fontFamily: theme('fontFamily.mono').join(', '),
+              fontWeight: '600',
               letterSpacing: theme('letterSpacing.tight'),
               color: theme('colors.gray.100'),
             },
             h3: {
+              fontFamily: theme('fontFamily.mono').join(', '),
               fontWeight: '600',
               color: theme('colors.gray.100'),
             },
             'h4,h5,h6': {
+              fontFamily: theme('fontFamily.mono').join(', '),
               color: theme('colors.gray.100'),
             },
             pre: {

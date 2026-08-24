@@ -5,7 +5,7 @@ const Experience = ({ title, company, range, url, text1, text2, text3 }) => {
 
   return (
     <div className="my-3">
-      <div className="flex flex-row flex-wrap text-xl">
+      <div className="flex flex-row flex-wrap font-mono text-lg">
         <span className="text-gray-500 dark:text-gray-400">{title}</span>
         <span className="text-gray-500 dark:text-gray-400">&nbsp;@&nbsp;</span>
         <span className="text-primary-color-500">

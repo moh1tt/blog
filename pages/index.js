@@ -78,7 +78,7 @@ export default function Home({ posts }) {
       <div>
         <div className="mb-12 flex flex-col items-center gap-x-12 xl:flex-row xl:items-start xl:justify-between">
           <div className="max-w-2xl pt-6">
-            <h1 className="pb-6 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+            <h1 className="pb-4 font-mono text-4xl font-semibold tracking-tight text-gray-900 dark:text-gray-100 sm:text-5xl">
               Mohit{' '}
               <span className="text-primary-color-500 dark:text-primary-color-dark-500">
                 Appari
@@ -128,7 +128,7 @@ export default function Home({ posts }) {
                       className={`absolute -inset-0.5 rounded-lg bg-gradient-to-r ${glow} opacity-50 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200`}
                     ></div>
                     <Link href={href}>
-                      <span className="relative flex items-center divide-x divide-gray-600 rounded-lg bg-white px-7 py-4 leading-none dark:bg-black">
+                      <span className="relative flex items-center divide-x divide-gray-600 rounded-lg bg-white px-7 py-4 font-mono leading-none dark:bg-black">
                         <span className="flex items-center space-x-5">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -154,7 +154,7 @@ export default function Home({ posts }) {
             </div>
           </div>
         </div>
-        <h2 className="flex pb-6 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl md:text-5xl">
+        <h2 className="flex pb-6 font-mono text-2xl font-semibold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl">
           Latest
         </h2>
         <hr className="border-gray-200 dark:border-gray-700" />
@@ -184,7 +184,7 @@ export default function Home({ posts }) {
                       <div className="space-y-5 xl:col-span-4">
                         <div className="space-y-1">
                           <div>
-                            <h2 className="text-2xl font-bold leading-8 tracking-tight">
+                            <h2 className="font-mono text-2xl font-semibold leading-8 tracking-tight">
                               <Link
                                 href={`/blog/${slug}`}
                                 className="text-gray-900 transition duration-500 ease-in-out hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-500"

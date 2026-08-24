@@ -3,7 +3,7 @@ const Education = ({ degree, school, range, text1, text2 }) => {
 
   return (
     <div className="my-3">
-      <div className="flex flex-row flex-wrap text-xl">
+      <div className="flex flex-row flex-wrap font-mono text-lg">
         <span className="text-gray-500 dark:text-gray-400">{degree}</span>
         <span className="text-gray-500 dark:text-gray-400">&nbsp;@&nbsp;</span>
         <span className="text-primary-color-500">{school}</span>

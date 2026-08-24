@@ -17,9 +17,9 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
 
   return (
     <>
-      <div className="mx-auto max-w-6xl divide-y divide-gray-400 dark:divide-gray-700">
+      <div className="mx-auto max-w-7xl divide-y divide-gray-400 dark:divide-gray-700">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+          <h1 className="font-mono text-2xl font-semibold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl">
             {title}
           </h1>
           <div className="relative max-w-lg">
@@ -71,7 +71,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                     <div className="space-y-5 xl:col-span-4">
                       <div className="space-y-1">
                         <div>
-                          <h2 className="text-2xl font-bold leading-8 tracking-tight">
+                          <h2 className="font-mono text-2xl font-semibold leading-8 tracking-tight">
                             <Link
                               href={`/blog/${slug}`}
                               className="text-gray-900 transition duration-500 ease-in-out hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-500"

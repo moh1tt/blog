@@ -18,9 +18,9 @@ export default function SnippetsLayout({ posts, title, initialDisplayPosts = [],
 
   return (
     <>
-      <div className="mx-auto max-w-6xl divide-y divide-gray-200 dark:divide-gray-800">
+      <div className="mx-auto max-w-7xl divide-y divide-gray-200 dark:divide-gray-800">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+          <h1 className="font-mono text-2xl font-semibold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl">
             {title}
           </h1>
           <div className="relative max-w-lg">
@@ -61,7 +61,7 @@ export default function SnippetsLayout({ posts, title, initialDisplayPosts = [],
                     <time dateTime={date} className="text-sm text-gray-400 dark:text-gray-500">
                       {formatDate(date)}
                     </time>
-                    <h2 className="mt-2 text-xl font-bold leading-7 tracking-tight text-gray-900 dark:text-gray-100">
+                    <h2 className="mt-2 font-mono text-xl font-semibold leading-7 tracking-tight text-gray-900 dark:text-gray-100">
                       {title}
                     </h2>
                     <div className="prose mt-2 max-w-none flex-1 text-sm leading-6 text-gray-500 dark:text-gray-400">
