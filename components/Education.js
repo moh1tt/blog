@@ -1,18 +1,12 @@
-import Link from '@/components/Link'
-
-const Experience = ({ title, company, range, url, text1, text2, text3 }) => {
-  const bullets = [text1, text2, text3].filter(Boolean)
+const Education = ({ degree, school, range, text1, text2 }) => {
+  const bullets = [text1, text2].filter(Boolean)
 
   return (
     <div className="my-3">
       <div className="flex flex-row flex-wrap text-xl">
-        <span className="text-gray-500 dark:text-gray-400">{title}</span>
+        <span className="text-gray-500 dark:text-gray-400">{degree}</span>
         <span className="text-gray-500 dark:text-gray-400">&nbsp;@&nbsp;</span>
-        <span className="text-primary-color-500">
-          <Link href={url} className="company">
-            {company}
-          </Link>
-        </span>
+        <span className="text-primary-color-500">{school}</span>
       </div>
       <div>
         <div className="p-1 font-mono text-sm text-gray-400 dark:text-gray-600">{range}</div>
@@ -32,4 +26,4 @@ const Experience = ({ title, company, range, url, text1, text2, text3 }) => {
   )
 }
 
-export default Experience
+export default Education
