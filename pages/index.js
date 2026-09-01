@@ -90,9 +90,17 @@ export default function Home({ posts }) {
               forecasting, and building production grade infrastructure.
             </h2>
             <p className="pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300">
-              I currently work as a Data Scientist with over 3 years of experience building large
+              I currently work as a Data Scientist with over 4 years of experience building large
               scale infrastructure and doing research at the core of finance and data, and I hold a
               Master's in Data Science from Florida State University.
+            </p>
+            <p className="pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300">
+              My work spans training deep neural networks (CNNs, equivariant networks, transformers)
+              and classical ML algorithms (regression, XGBoost, LightGBM) alongside time series and
+              econometric modeling — ARIMA, GARCH, moving averages, and decomposition — to forecast
+              spending, risk, and market behavior. I also build LLM-powered applications and RAG
+              pipelines, and I care a lot about turning research code into production systems that
+              actually hold up.
             </p>
             <p className="pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300">
               <RoughNotation
