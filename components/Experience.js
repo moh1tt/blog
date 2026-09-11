@@ -1,7 +1,7 @@
 import Link from '@/components/Link'
 
-const Experience = ({ title, company, range, url, text1, text2, text3 }) => {
-  const bullets = [text1, text2, text3].filter(Boolean)
+const Experience = ({ title, company, range, url, text1, text2, text3, text4, text5 }) => {
+  const bullets = [text1, text2, text3, text4, text5].filter(Boolean)
 
   return (
     <div className="my-3">

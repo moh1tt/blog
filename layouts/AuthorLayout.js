@@ -6,6 +6,8 @@ import Experience from '@/components/Experience'
 import experienceData from '@/data/experienceData'
 import Education from '@/components/Education'
 import educationData from '@/data/educationData'
+import Skills from '@/components/Skills'
+import skillsData from '@/data/skillsData'
 import { RoughNotation } from 'react-rough-notation'
 
 const ExternalLinkIcon = () => (
@@ -130,16 +132,7 @@ export default function AuthorLayout({ frontMatter }) {
           </div>
           <div className="max-w-none pt-8 pb-8 xl:col-span-2">
             {experienceData.map((d) => (
-              <Experience
-                key={d.company}
-                title={d.title}
-                company={d.company}
-                range={d.range}
-                url={d.url}
-                text1={d.text1}
-                text2={d.text2}
-                text3={d.text3}
-              />
+              <Experience key={d.company} {...d} />
             ))}
           </div>
         </div>
@@ -151,14 +144,19 @@ export default function AuthorLayout({ frontMatter }) {
           </div>
           <div className="max-w-none pt-8 pb-8 xl:col-span-2">
             {educationData.map((d) => (
-              <Education
-                key={d.school}
-                degree={d.degree}
-                school={d.school}
-                range={d.range}
-                text1={d.text1}
-                text2={d.text2}
-              />
+              <Education key={d.school} {...d} />
+            ))}
+          </div>
+        </div>
+        <div className="mt-10">
+          <div className="space-y-2 pt-6 pb-8 md:space-y-5">
+            <h1 className="font-mono text-2xl font-semibold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl">
+              Skills
+            </h1>
+          </div>
+          <div className="max-w-none pt-8 pb-8 xl:col-span-2">
+            {skillsData.map((d) => (
+              <Skills key={d.category} {...d} />
             ))}
           </div>
         </div>
