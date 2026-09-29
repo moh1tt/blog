@@ -94,7 +94,7 @@ export default function Home({ posts }) {
               since. What keeps me hooked is forecasting: the idea that a careful look at the past
               can give you a glimpse of the future.
             </p>
-            <p className="pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300">
+            <p className="pt-5 text-lg text-gray-600 dark:text-gray-300">
               <RoughNotation
                 animate="true"
                 type="highlight"
@@ -107,7 +107,7 @@ export default function Home({ posts }) {
                 This site is a collection of my thoughts, projects, resources, and everything I'm
                 currently working on, the things I build and can't stop chasing.
               </RoughNotation>
-              <div className="mt-8 text-slate-600 dark:text-slate-400">
+              <div className="mt-8 text-gray-600 dark:text-gray-300">
                 Thank you for stopping by. Whether it's collaboration, feedback, or an opportunity
                 in data and finance, feel free to{' '}
                 <Link href="/contact" className="text-primary-500 hover:text-primary-600">
