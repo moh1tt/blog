@@ -85,25 +85,14 @@ export default function Home({ posts }) {
               </span>
             </h1>
             <h2 className="pt-5 text-lg text-gray-600 dark:text-gray-300">
-              Welcome to my corner of the internet, where I dig deep into neural networks, the math
-              and architecture behind them, quantitative methods, LLMs and AI agents, MCP servers,
-              forecasting, and building production grade infrastructure.
+              Welcome to my corner of the internet, where I write about data, finance, and
+              forecasting, and keep a library of the resources that shaped how I think about them.
             </h2>
-            <p className="pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300">
-              I currently work as a Data Scientist at the Agency for Persons with Disabilities
-              (State of Florida), with 3+ years of experience building machine learning,
-              forecasting, and data-intensive systems across research and production, and I hold a
-              Master's in Data Science from Florida State University.
-            </p>
-            <p className="pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300">
-              My work spans training deep neural networks (CNNs, equivariant networks, transformers)
-              and classical ML algorithms (regression, XGBoost, LightGBM) alongside time series and
-              econometric modeling — ARIMA, GARCH, moving averages, and decomposition — to forecast
-              spending, risk, and market behavior. Day to day that means analyzing millions of
-              transactional records, building forecasts that land within 5–10% of actual spend, and
-              engineering the ETL pipelines underneath them. I also build LLM-powered applications,
-              RAG pipelines, and MCP servers, and I care a lot about turning research code into
-              production systems that actually hold up.
+            <p className="pt-5 text-lg text-gray-600 dark:text-gray-300">
+              I started out as a Software Developer at S&P Global, became a Data Scientist, and have
+              been drifting deeper into finance, economics, deep learning and mathematics ever
+              since. What keeps me hooked is forecasting: the idea that a careful look at the past
+              can give you a glimpse of the future.
             </p>
             <p className="pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300">
               <RoughNotation
@@ -119,11 +108,12 @@ export default function Home({ posts }) {
                 currently working on, the things I build and can't stop chasing.
               </RoughNotation>
               <div className="mt-8 text-slate-600 dark:text-slate-400">
-                Thank you for stopping by, feel free to{' '}
+                Thank you for stopping by. Whether it's collaboration, feedback, or an opportunity
+                in data and finance, feel free to{' '}
                 <Link href="/contact" className="text-primary-500 hover:text-primary-600">
                   reach out
                 </Link>
-                , happy reading!
+                . Happy reading!
               </div>
               <div className="mt-8 text-slate-600 dark:text-slate-400">
                 <span className="text-sm">Press</span>{' '}
