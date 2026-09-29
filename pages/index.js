@@ -95,6 +95,18 @@ export default function Home({ posts }) {
               can give you a glimpse of the future.
             </p>
             <p className="pt-5 text-lg text-gray-600 dark:text-gray-300">
+              Whether you're a fellow quant enthusiast, just curious, or starting out (like I was),
+              follow along as I write through market perception, expected payoffs, and turbulent
+              volatility. Start with one of the posts below, or catch more of my writing on{' '}
+              <Link
+                href="https://medium.com/@moh1tt"
+                className="text-primary-500 hover:text-primary-600"
+              >
+                Medium
+              </Link>
+              !
+            </p>
+            <p className="pt-5 text-lg text-gray-600 dark:text-gray-300">
               <RoughNotation
                 animate="true"
                 type="highlight"
