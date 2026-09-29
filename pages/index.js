@@ -219,7 +219,7 @@ export default function Home({ posts }) {
                               <Tag key={tag} text={tag} />
                             ))}
                           </div>
-                          <div className="prose max-w-none pt-2 font-sans leading-6 text-gray-600 dark:text-gray-300">
+                          <div className="prose max-w-none pt-2 font-sans leading-6 text-gray-500 dark:text-gray-400">
                             {summary}
                           </div>
                         </div>
