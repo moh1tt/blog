@@ -27,7 +27,10 @@ const ExternalLinkIcon = () => (
 )
 
 export default function AuthorLayout({ frontMatter }) {
-  const { name, avatar, occupation, company, email, linkedin, github, text1, text2 } = frontMatter
+  const { name, avatar, occupation, company, email, linkedin, github, text1 } = frontMatter
+  const paragraphs = ['text2', 'text3', 'text4', 'text5', 'text6', 'text7']
+    .map((key) => frontMatter[key])
+    .filter(Boolean)
 
   return (
     <>
@@ -60,7 +63,7 @@ export default function AuthorLayout({ frontMatter }) {
               <SocialIcon kind="linkedin" href={linkedin} />
             </div>
           </div>
-          <div className="prose max-w-none pt-8 pb-8 dark:prose-dark xl:col-span-2">
+          <div className="prose max-w-none pt-8 pb-8 font-sans text-gray-600 dark:prose-dark dark:font-sans dark:text-gray-300 xl:col-span-2">
             <p>
               <RoughNotation
                 type="bracket"
@@ -73,8 +76,12 @@ export default function AuthorLayout({ frontMatter }) {
                 {text1}
               </RoughNotation>
             </p>
+            {paragraphs.map((text) => (
+              <p key={text}>{text}</p>
+            ))}
             <p>
-              I'm eager to contribute to AI engineering initiatives that bridge{' '}
+              I strive to be a subject matter expert and a professional in this field, and to use
+              data and history to take a better,{' '}
               <RoughNotation
                 type="highlight"
                 show={true}
@@ -83,11 +90,10 @@ export default function AuthorLayout({ frontMatter }) {
                 animationDelay={1000}
                 animationDuration={3000}
               >
-                <span className="text-black dark:text-white">deep learning research</span>
-              </RoughNotation>{' '}
-              with real-world impact.
+                <span className="text-black dark:text-white">data-driven look into the future</span>
+              </RoughNotation>
+              .
             </p>
-            <p>{text2}</p>
             <p>
               Check out some of my photography work on{' '}
               <Link href="https://vsco.co/moh1tttt/gallery">VSCO</Link>.
