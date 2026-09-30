@@ -64,7 +64,7 @@ export default function SnippetsLayout({ posts, title, initialDisplayPosts = [],
                     <h2 className="mt-2 font-mono text-xl font-semibold leading-7 tracking-tight text-gray-900 dark:text-gray-100">
                       {title}
                     </h2>
-                    <div className="prose mt-2 max-w-none flex-1 text-sm leading-6 text-gray-500 dark:text-gray-400">
+                    <div className="prose mt-2 max-w-none flex-1 font-sans text-sm leading-6 text-gray-500 dark:text-gray-400">
                       {summary}
                     </div>
                     <div className="mt-4 flex flex-wrap gap-2">

@@ -23,7 +23,9 @@ const Card = ({ title, description, href, github, tech1, tech2, tech3, tech4, te
           </div>
           <h2 className="mb-3 font-mono text-xl font-semibold leading-8 tracking-tight">{title}</h2>
 
-          <p className="prose mb-3 max-w-none text-gray-500 dark:text-gray-400">{description}</p>
+          <p className="prose mb-3 max-w-none font-sans text-gray-500 dark:text-gray-400">
+            {description}
+          </p>
           <div className="flex flex-row justify-between">
             <div className="text-sm text-gray-400">{techs.join(' • ')}</div>
           </div>
