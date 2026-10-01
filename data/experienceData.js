@@ -1,59 +1,54 @@
 const experienceData = [
   {
     title: 'Data Scientist',
-    company: 'Agency for Persons with Disabilities — State of Florida',
-    range: 'June 2025 – Present',
+    company: 'Florida Agency for Persons with Disabilities',
+    range: 'Jun 2025 – Present',
     text1:
-      'Analyze millions of transactional records across 60K+ clients and $200M+ in monthly spending, using exploratory and statistical analysis to surface anomalies, utilization trends, data inconsistencies, and operational patterns that inform financial and service decisions.',
+      'Built and optimized 15–20 automated Python/SPSS pipelines across Medicaid claims, FMMIS, iConnect, and Azure, tuning SQL over millions of records to cut processing time by 83%.',
     text2:
-      'Develop spending and budget forecasting models with ARIMA, regression, moving averages, and time series decomposition, generating projections that typically land within 5–10% of actual expenditures to support budgeting, rate decisions, and strategic planning.',
+      'Forecasted expenditure across $200M+ in payments using ARIMA, regression, and XGBoost/LightGBM, within 5–10% of actuals, to guide budgeting and rate decisions.',
     text3:
-      'Model reimbursement rate scenarios across 22+ service areas, quantifying projected financial impact under alternative rates and translating historical spending and utilization patterns into data-driven recommendations for leadership.',
+      'Initiated and led Power BI dashboards on service utilization, regional trends, and spending, used by executive leadership for programs serving 60K+ individuals.',
     text4:
-      'Engineer 40+ automated ETL and analytics pipelines in Python, SQL Server, and Azure Data Warehouse, processing 300K+ records and enabling scalable reporting, forecasting, and anomaly analysis.',
-    text5:
-      'Re-engineered statistical and reporting workflows using Python, SQL, SPSS, and Power BI, cutting analysis turnaround time by 75% and SQL processing time by 83%, while delivering stakeholder-facing dashboards and ad hoc analyses.',
+      'Detected billing outliers and ran hypothesis and A/B tests in Python and SPSS to answer stakeholder questions on consumers, providers, and payments.',
   },
   {
     title: 'AI/ML Researcher',
     company: 'Florida State University',
-    range: 'June 2024 – September 2024',
+    range: 'Jun 2024 – Sep 2024',
     text1:
-      'Fine-tuned and benchmarked NequIP, an equivariant neural network, using transfer learning across 11,000+ material structures — tuning hyperparameters and custom MAE/MSE weighted loss functions to improve prediction consistency and reduce validation error by ~15%.',
+      'Fine-tuned NequIP, an equivariant GNN, on 11K+ material structures with a custom weighted loss, cutting validation error by 15%.',
     text2:
-      'Built reproducible Python, Docker, MLflow, and HPC workflows for data preparation, training, experiment tracking, inference, and evaluation, incorporating Neo4j to model relationships within structured scientific data and make experiments faster and repeatable.',
+      'Built reproducible training pipelines with Python, Docker, MLflow, and HPC, enabling tracked, repeatable experiments.',
     text3:
-      'Designed controlled experiments across multiple model architectures using statistical hypothesis testing, A/B comparisons, and out-of-sample validation to identify the architecture that carried forward into subsequent models.',
+      'Selected the best model architecture through controlled experiments, hypothesis testing, and out-of-sample validation.',
   },
   {
     title: 'Software Developer',
     company: 'S&P Global',
-    range: 'January 2022 – August 2023',
+    range: 'Jan 2022 – Aug 2023',
     text1:
-      'Led the modernization of legacy .NET document-processing workflows — researching and evaluating open-source Python OCR and document-processing technologies, then translating existing requirements into a scalable Python extraction platform and cutting licensing costs by 80%.',
+      'Led the migration of legacy .NET document-processing workflows to a scalable open-source Python extraction platform, cutting licensing costs by 80%.',
     text2:
-      'Mentored a 5-person engineering team on Python data extraction and pipeline development while contributing to the architecture and production rollout of systems processing 10,000+ financial, energy, and automotive documents per day at 95% extraction accuracy.',
+      'Mentored a 5-person team and helped architect and roll out systems processing 10K+ financial, energy, and automotive documents per day at 95% extraction accuracy.',
     text3:
-      'Engineered fault-tolerant AWS/Docker data pipelines with event-driven ingestion, automated retries, structured logging, and validation, reducing manual extraction effort by over 90% and enabling unattended data capture.',
+      'Built OCR and CNN classification workflows with Tesseract and PyTorch, turning unstructured financial filings and earnings data into structured datasets for downstream analytics.',
     text4:
-      'Built OCR and CNN-based classification workflows with Tesseract and TensorFlow to turn unstructured financial filings, earnings information, energy specifications, and automotive documents into structured datasets for downstream analytics.',
-    text5:
-      'Designed modular Python frameworks and cloud data workflows using AWS S3, Athena, BigQuery, REST APIs, CDC-based updates, GitHub Actions CI/CD, and 80% test coverage, improving scalability, data quality, and deployment reliability.',
+      'Engineered fault-tolerant AWS/Docker pipelines with event-driven ingestion, retries, validation, and GitHub Actions CI/CD at 80% test coverage, reducing manual extraction by 90%+.',
   },
   {
     title: 'Software Developer Intern',
     company: 'LG Electronics',
-    range: 'May 2021 – August 2021',
+    range: 'May 2021 – Aug 2021',
     text1:
-      'Developed real-time drowsiness detection and logistics tracking systems using Python, OpenCV, YOLO, CNNs, REST APIs, and PostgreSQL, hitting 90% detection accuracy and reducing package sorting time by 25%.',
-    text2: "Earned 3rd place in LG's internal Ideathon for the logistics tracking system.",
+      'Built real-time drowsiness detection and logistics tracking with Python, OpenCV, and YOLO, hitting 90% accuracy, cutting sorting time by 25%, and placing 3rd in LG’s internal Ideathon.',
   },
   {
     title: 'Software Developer Intern',
     company: 'ITC Infotech',
-    range: 'January 2021 – March 2021',
+    range: 'Jan 2021 – Mar 2021',
     text1:
-      'Developed Python Flask REST APIs with MySQL for master-data management, role-based access control, and automated product tracking workflows, reducing manual workload by 30%.',
+      'Developed Flask REST APIs with MySQL for master-data management, role-based access, and automated product tracking, reducing manual workload by 30%.',
   },
 ]
 
